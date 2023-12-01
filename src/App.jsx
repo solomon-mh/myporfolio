@@ -1,23 +1,26 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faFacebookF,
-  faInstagram,
-  faTwitter,
-} from "@fortawesome/free-brands-svg-icons";
+import AboutMe from "./components/AboutMe";
+import Hero from "./components/Hero";
+import MyImage from "./components/MyImage";
+import MyQualification from "./components/MyQualification";
+import MySkills from "./components/MySkills";
+import MySocialLinks from "./components/MySocialLinks";
+import ScrollDown from "./utils/ScrollDown";
 
 function App() {
   return (
-    <>
-      <h1 className='text-4xl bg-red-500'>
-        <FontAwesomeIcon icon={faFacebookF} />
-      </h1>
-      <h1>
-        <FontAwesomeIcon icon={faInstagram} />
-      </h1>{" "}
-      <h1>
-        <FontAwesomeIcon icon={faTwitter} />
-      </h1>
-    </>
+    <div className='App my-24 mt-12'>
+      <header className='py-12 flex justify-around items-center'>
+        <MySocialLinks />
+        <MyImage />
+      </header>
+      <main>
+        <Hero />
+        <ScrollDown />
+        <AboutMe />
+        <MySkills />
+        <MyQualification />
+      </main>
+    </div>
   );
 }
 
