@@ -9,13 +9,22 @@ const MySocialLinks = () => {
   return (
     <div>
       <aside className='mx-12 flex flex-col text-indigo-300'>
-        <a href='#linkedin'>
+        <a
+          className='hover:scale-110 hover:text-indigo-600 duration-500'
+          href='#linkedin'
+        >
           <FontAwesomeIcon icon={faLinkedinIn} />
         </a>
-        <a href='#instagram'>
+        <a
+          className='hover:scale-110 hover:text-indigo-600 duration-500'
+          href='#instagram'
+        >
           <FontAwesomeIcon icon={faInstagram} />
         </a>
-        <a href='#github'>
+        <a
+          className='hover:scale-110 hover:text-indigo-600 duration-500'
+          href='#github'
+        >
           <FontAwesomeIcon icon={faGithub} />
         </a>
       </aside>
