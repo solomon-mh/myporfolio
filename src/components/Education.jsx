@@ -5,7 +5,7 @@ import { faCalendar } from "@fortawesome/free-solid-svg-icons";
 const Education = () => {
   const edu = education.map((ed) => {
     return (
-      <div className='px-8 py-3' key={crypto.randomUUID()}>
+      <div className='education px-8 py-3' key={crypto.randomUUID()}>
         <b className='block'>{ed.course}</b>
         <small className='block font-extralight pb-2'>{ed.takenFrom}</small>
         {ed.year && (
