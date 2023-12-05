@@ -15,7 +15,7 @@ const AboutMe = () => {
         libero quisquam, aliquid doloremque deserunt maiores, nisi
         necessitatibus!
       </p>
-      <div className='experience gap-0.5 sm:gap-7 w-4/5 m-auto flex px-6 mt-6 leading-4 justify-center'>
+      <div className='experience gap-2 sm:gap-8 w-4/5 m-auto flex px-6 mt-6 leading-4 justify-center'>
         <div className='yrs'>
           <b className='block font-extrabold text-indigo-600 py-1'>01+</b>
           <small className='font-extralight italic'>Years Experience</small>
