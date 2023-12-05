@@ -1,13 +1,14 @@
 import { faFileText } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
 const Hero = () => {
   return (
     <article className='mx-12'>
       <h1 className='text-3xl font-extrabold'>
         Hi, I am Solomon <span className='block'>Muhye</span>
       </h1>
-      <b className='text-sm font-light text-indigo-400'>Frontend Developer</b>
+      <b className='text-sm text-indigo-400 font-light inline-block py-2'>
+        Frontend Developer
+      </b>
       <p>
         Passionate web developer dedicated to provide a quality work in a timely
         manner.
