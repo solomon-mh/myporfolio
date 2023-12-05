@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import {
   faBagShopping,
   faChartColumn,
@@ -6,8 +7,20 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Education from "./Education";
 
 const MyQualification = () => {
+  const [animateSection, setAnimateSection] = useState("");
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setAnimateSection("");
+    }, 1000);
+    return () => clearTimeout(timeout);
+  }, [animateSection]);
   return (
-    <section className='text-center my-8'>
+    <section
+      id='qualification'
+      className={`${
+        animateSection === "qualification" ? "section-animation" : ""
+      } text-center my-8`}
+    >
       <h2 className='text-2xl font-semibold font-mono'>Qualification</h2>
       <small>My journey</small>
       <div className='btns flex justify-center gap-4'>
