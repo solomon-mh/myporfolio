@@ -1,5 +1,20 @@
 .img-container {
+  border-radius: 30% 30% / 80% 80%;
+  /* border-top-left-radius: 80%;
   border-top-right-radius: 80%;
   border-bottom-left-radius: 100%;
-  border-bottom-right-radius: 60%;
+  border-bottom-right-radius: 20%; */
+}
+@keyframes dropFromAbove {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.section-animation {
+  animation: dropFromAbove 1s ease;
 }
