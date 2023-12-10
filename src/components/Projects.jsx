@@ -21,8 +21,8 @@ const Projects = () => {
       <small className='inline-block font-serif text-orange-400 pb-4'>
         most recent projects
       </small>
-      <section className='w-3/4 m-auto flex items-center gap-6'>
-        <div>
+      <section className='w-9/10 sm:w-3/4 m-auto flex items-center gap-6'>
+        <div className='pr-4'>
           <button onClick={() => handleBtnClick("left")}>
             <i>
               <FontAwesomeIcon icon={faArrowLeft} />
@@ -32,7 +32,7 @@ const Projects = () => {
         <section className='border-2 rounded-2xl p-3'>
           <div className='relative cursor-pointer'>
             <img src={myProjectsList[currentProject].image} alt='' />
-            <div className='absolute w-24 h-24 rounded-full grid flex-wrap items-center  bg-green-300 -top-12 -right-12   shadow-lg shadow-slate-300'>
+            <div className='absolute w-16 text-xs sm:text-base h-16 sm:w-24 sm:h-24 rounded-full grid flex-wrap items-center  bg-brightRed -top-10 -right-10 shadow-lg shadow-slate-600'>
               {myProjectsList[currentProject].projectTitle}
             </div>
           </div>
@@ -43,7 +43,7 @@ const Projects = () => {
             <p className='text-sm'>{myProjectsList[currentProject].desc}</p>
           </div>
         </section>
-        <div>
+        <div className='pl-4'>
           <button onClick={() => handleBtnClick("right")}>
             <i>
               <FontAwesomeIcon icon={faArrowRight} />
