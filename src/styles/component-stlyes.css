@@ -5,16 +5,18 @@
   border-bottom-left-radius: 100%;
   border-bottom-right-radius: 20%; */
 }
-@keyframes dropFromAbove {
-  0% {
-    transform: translateY(-100%);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
+.header {
+  -webkit-backdrop-filter: blur(24px);
+  backdrop-filter: blur(24px);
 }
-.section-animation {
-  animation: dropFromAbove 1s ease;
+.navlinks {
+  font-size: small;
+  font-weight: 600;
+  margin: 0 6px;
+  padding: 4px 14px;
+  transition: all 0.5s;
+  border-radius: 8px;
+}
+.navlinks:hover {
+  color: #f26200;
 }
