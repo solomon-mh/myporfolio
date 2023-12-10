@@ -1,7 +1,25 @@
 import { faMoon } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useEffect, useState } from "react";
+import {
+  homePosition as HP,
+  AboutPosition as AP,
+  SkillsPosition as SP,
+  ServicePosition as SrvP,
+  ProjectPosition as ProjP,
+  ContactPosition as CP,
+} from "../data/scrollPosition";
 
 const Header = () => {
+  const [scrollPosition, setScrollPosition] = useState(0);
+  console.log(scrollPosition);
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollPosition(window.scrollY);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
   function scrollToSection() {
     console.log("Zero");
   }
@@ -11,31 +29,64 @@ const Header = () => {
         Solomon <span className='text-brightRed'>Muhye</span>
       </h1>
       <nav className='hidden md:block'>
-        <button onClick={() => scrollToSection("Hero")} className='navlinks'>
+        <button
+          onClick={() => scrollToSection("Hero")}
+          className={`${
+            HP.min <= scrollPosition && scrollPosition <= HP.max
+              ? "text-brightRed"
+              : ""
+          } navlinks`}
+        >
           Home
         </button>
         <button
           onClick={() => scrollToSection("Features")}
-          className='navlinks'
+          className={`${
+            AP.min <= scrollPosition && scrollPosition <= AP.max
+              ? "text-brightRed"
+              : ""
+          } navlinks`}
         >
           About
         </button>
         <button
           onClick={() => scrollToSection("HowItWorks")}
-          className='navlinks'
+          className={`${
+            SP.min <= scrollPosition && scrollPosition <= SP.max
+              ? "text-brightRed"
+              : ""
+          } navlinks`}
         >
           Skills
         </button>
         <button
           onClick={() => scrollToSection("Testimonial")}
-          className='navlinks'
+          className={`${
+            SrvP.min <= scrollPosition && scrollPosition <= SrvP.max
+              ? "text-brightRed"
+              : ""
+          } navlinks`}
         >
           Service
         </button>
-        <button onClick={() => scrollToSection("Pricing")} className='navlinks'>
+        <button
+          onClick={() => scrollToSection("Pricing")}
+          className={`${
+            ProjP.min <= scrollPosition && scrollPosition <= ProjP.max
+              ? "text-brightRed"
+              : ""
+          } navlinks`}
+        >
           Projects
         </button>
-        <button onClick={() => scrollToSection("FAQ")} className='navlinks'>
+        <button
+          onClick={() => scrollToSection("FAQ")}
+          className={`${
+            CP.min <= scrollPosition && scrollPosition <= CP.max
+              ? "text-brightRed"
+              : ""
+          } navlinks`}
+        >
           Contact
         </button>
         <div className='inline-block cursor-pointer'>
