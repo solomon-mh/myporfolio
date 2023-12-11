@@ -1,4 +1,14 @@
-import { faMoon } from "@fortawesome/free-solid-svg-icons";
+import {
+  faBagShopping,
+  faChalkboardUser,
+  faContactBook,
+  faEnvelopeOpenText,
+  faHome,
+  faImage,
+  faMoon,
+  faNavicon,
+  faTimes,
+} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useEffect, useState } from "react";
 import {
@@ -12,7 +22,12 @@ import {
 
 const Header = () => {
   const [scrollPosition, setScrollPosition] = useState(0);
-  console.log(scrollPosition);
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setMenuOpen((prev) => !prev);
+  };
+
   useEffect(() => {
     const handleScroll = () => {
       setScrollPosition(window.scrollY);
@@ -20,83 +35,190 @@ const Header = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-  function scrollToSection() {
-    console.log("Zero");
+  function scrollToSection(sectionId) {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
   }
   return (
-    <header className='header min-w-full left-0 fixed flex justify-between items-center header z-50 bg-headerColor text-white text-xl py-4 px-8 top-0'>
-      <h1>
-        Solomon <span className='text-brightRed'>Muhye</span>
-      </h1>
-      <nav className='hidden md:block'>
-        <button
-          onClick={() => scrollToSection("Hero")}
-          className={`${
-            HP.min <= scrollPosition && scrollPosition <= HP.max
-              ? "text-brightRed"
-              : ""
-          } navlinks`}
-        >
-          Home
-        </button>
-        <button
-          onClick={() => scrollToSection("Features")}
-          className={`${
-            AP.min <= scrollPosition && scrollPosition <= AP.max
-              ? "text-brightRed"
-              : ""
-          } navlinks`}
-        >
-          About
-        </button>
-        <button
-          onClick={() => scrollToSection("HowItWorks")}
-          className={`${
-            SP.min <= scrollPosition && scrollPosition <= SP.max
-              ? "text-brightRed"
-              : ""
-          } navlinks`}
-        >
-          Skills
-        </button>
-        <button
-          onClick={() => scrollToSection("Testimonial")}
-          className={`${
-            SrvP.min <= scrollPosition && scrollPosition <= SrvP.max
-              ? "text-brightRed"
-              : ""
-          } navlinks`}
-        >
-          Service
-        </button>
-        <button
-          onClick={() => scrollToSection("Pricing")}
-          className={`${
-            ProjP.min <= scrollPosition && scrollPosition <= ProjP.max
-              ? "text-brightRed"
-              : ""
-          } navlinks`}
-        >
-          Projects
-        </button>
-        <button
-          onClick={() => scrollToSection("FAQ")}
-          className={`${
-            CP.min <= scrollPosition && scrollPosition <= CP.max
-              ? "text-brightRed"
-              : ""
-          } navlinks`}
-        >
-          Contact
-        </button>
-        <div className='inline-block cursor-pointer'>
-          <FontAwesomeIcon
-            style={{ transform: "rotate(180deg)" }}
-            icon={faMoon}
-          />
+    <section>
+      <header className='header hidden  min-w-full left-0 fixed sm:flex justify-between items-center header z-50 bg-headerColor text-white text-xl py-4 px-8 top-0'>
+        <h1>
+          Solomon <span className='text-brightRed'>Muhye</span>
+        </h1>
+        <nav className='hidden md:block'>
+          <button
+            onClick={() => scrollToSection("home")}
+            className={`${
+              HP.min <= scrollPosition && scrollPosition <= HP.max
+                ? "text-brightRed"
+                : ""
+            } navlinks`}
+          >
+            Home
+          </button>
+          <button
+            onClick={() => scrollToSection("about")}
+            className={`${
+              AP.min <= scrollPosition && scrollPosition <= AP.max
+                ? "text-brightRed"
+                : ""
+            } navlinks`}
+          >
+            About
+          </button>
+          <button
+            onClick={() => scrollToSection("skills")}
+            className={`${
+              SP.min <= scrollPosition && scrollPosition <= SP.max
+                ? "text-brightRed"
+                : ""
+            } navlinks`}
+          >
+            Skills
+          </button>
+          <button
+            onClick={() => scrollToSection("service")}
+            className={`${
+              SrvP.min <= scrollPosition && scrollPosition <= SrvP.max
+                ? "text-brightRed"
+                : ""
+            } navlinks`}
+          >
+            Service
+          </button>
+          <button
+            onClick={() => scrollToSection("projects")}
+            className={`${
+              ProjP.min <= scrollPosition && scrollPosition <= ProjP.max
+                ? "text-brightRed"
+                : ""
+            } navlinks`}
+          >
+            Projects
+          </button>
+          <button
+            onClick={() => scrollToSection("contact")}
+            className={`${
+              CP.min <= scrollPosition && scrollPosition <= CP.max
+                ? "text-brightRed"
+                : ""
+            } navlinks`}
+          >
+            Contact
+          </button>
+          <button>
+            <FontAwesomeIcon
+              style={{
+                transform: "rotate(180deg)",
+                position: "relative",
+                top: "4px",
+              }}
+              icon={faMoon}
+            />
+          </button>
+        </nav>
+      </header>
+      {/* For Mobile Devices / small devices */}
+      <div className='header sm:hidden z-40 fixed justify-between py-4 bottom-0 flex w-full bg-headerColor'>
+        <div className='px-4'>
+          <h1>
+            Solomon <span className='text-brightRed'>Muhye</span>
+          </h1>
         </div>
-      </nav>
-    </header>
+        <div className='px-4 flex gap-3'>
+          <button>
+            <FontAwesomeIcon
+              style={{
+                transform: "rotate(180deg)",
+              }}
+              icon={faMoon}
+            />
+          </button>
+          <div
+            className='z-50 text-brightRed cursor-pointer'
+            onClick={() => toggleMenu()}
+          >
+            {menuOpen ? (
+              <FontAwesomeIcon icon={faTimes} />
+            ) : (
+              <FontAwesomeIcon icon={faNavicon} />
+            )}
+          </div>
+        </div>
+        {menuOpen && (
+          <div className='grid grid-cols-3 gap-6 px-16 py-4 pb-8 w-full fixed bottom-0 bg-slate-900 z-30'>
+            <div
+              onClick={() => scrollToSection("home")}
+              className={`${
+                HP.min <= scrollPosition && scrollPosition <= HP.max
+                  ? "text-brightRed"
+                  : ""
+              } navlinks`}
+            >
+              <FontAwesomeIcon icon={faHome} />
+              <p> Home</p>
+            </div>
+            <div
+              onClick={() => scrollToSection("about")}
+              className={`${
+                AP.min <= scrollPosition && scrollPosition <= AP.max
+                  ? "text-brightRed"
+                  : ""
+              } navlinks`}
+            >
+              <FontAwesomeIcon icon={faChalkboardUser} />
+              <p> About</p>
+            </div>
+            <div
+              onClick={() => scrollToSection("skills")}
+              className={`${
+                SP.min <= scrollPosition && scrollPosition <= SP.max
+                  ? "text-brightRed"
+                  : ""
+              } navlinks`}
+            >
+              <FontAwesomeIcon icon={faEnvelopeOpenText} />
+              <p> Skills</p>
+            </div>
+            <div
+              onClick={() => scrollToSection("services")}
+              className={`${
+                SrvP.min <= scrollPosition && scrollPosition <= SrvP.max
+                  ? "text-brightRed"
+                  : ""
+              } navlinks`}
+            >
+              <FontAwesomeIcon icon={faBagShopping} />
+              <p> Services</p>
+            </div>
+            <div
+              onClick={() => scrollToSection("projects")}
+              className={`${
+                ProjP.min <= scrollPosition && scrollPosition <= ProjP.max
+                  ? "text-brightRed"
+                  : ""
+              } navlinks`}
+            >
+              <FontAwesomeIcon icon={faImage} />
+              <p>Projects</p>
+            </div>
+            <div
+              onClick={() => scrollToSection("contact")}
+              className={`${
+                CP.min <= scrollPosition && scrollPosition <= CP.max
+                  ? "text-brightRed"
+                  : ""
+              } navlinks`}
+            >
+              <FontAwesomeIcon icon={faContactBook} />
+              <p>Contact</p>
+            </div>
+          </div>
+        )}
+      </div>
+    </section>
   );
 };
 
