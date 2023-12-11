@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const AboutMe = () => {
   return (
-    <section className='mx-12 text-center py-8'>
+    <section id='about' className='mx-12 text-center py-8'>
       <b className='block text-2xl'>About Me</b>
       <small className='inline-block pb-3'>My Introduction</small>
       <p>
