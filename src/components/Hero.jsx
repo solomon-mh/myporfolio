@@ -1,11 +1,37 @@
+import { useEffect, useRef } from "react";
+import ScrollReveal from "scrollreveal";
 import { faMailBulk } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import MyImage from "./MyImage";
+
 const Hero = () => {
+  const leftRef = useRef(null);
+  const rightRef = useRef(null);
+
+  useEffect(() => {
+    ScrollReveal().reveal(leftRef.current, {
+      origin: "left",
+      distance: "50px",
+      duration: 1600,
+      delay: 100,
+      easing: "ease",
+      reset: true,
+    });
+
+    ScrollReveal().reveal(rightRef.current, {
+      origin: "right",
+      distance: "50px",
+      duration: 1600,
+      delay: 100,
+      easing: "ease",
+      reset: true,
+    });
+  }, []);
+
   return (
     <section id='home'>
       <article className='flex flex-col-reverse text-center sm:text-justify md:grid md:grid-cols-2 justify-around items-center  my-8 sm:my-44'>
-        <article className='mx-12 sm:text-left'>
+        <article className='mx-12 sm:text-left' ref={leftRef}>
           <h1 className='text-3xl  md:hidden font-extrabold'>
             Hi, I am{" "}
             <span className='text-brightRed'>
@@ -24,7 +50,7 @@ const Hero = () => {
             Fullstack Developer
           </small>
           <p>
-            Passionate web developer dedicated to provide a quality work in a
+            Passionate web developer dedicated to providing quality work in a
             timely manner.
           </p>
           <button className='bg-indigo-600 my-8 p-2 text-sm rounded-lg text-white'>
@@ -34,7 +60,9 @@ const Hero = () => {
             </i>
           </button>
         </article>
-        <MyImage />
+        <article ref={rightRef}>
+          <MyImage />
+        </article>
       </article>
     </section>
   );
