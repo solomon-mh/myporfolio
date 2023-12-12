@@ -1,41 +1,23 @@
+import ScrollReveal from "scrollreveal";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Title from "../utils/Title";
-import {
-  faBootstrap,
-  faCss3,
-  faHtml5,
-  faJava,
-  faJs,
-  faNode,
-  faPhp,
-  faReact,
-} from "@fortawesome/free-brands-svg-icons";
+import { mySkills, skillsIcons } from "../data/skills";
+import { useEffect, useRef } from "react";
 
 const MySkills = () => {
-  const skillsIcons = {
-    HTML5: faHtml5,
-    Css: faCss3,
-    Bootstrap: faBootstrap,
-    Javascript: faJs,
-    React: faReact,
-    Node: faNode,
-    java: faJava,
-    Php: faPhp,
-  };
-  const mySkills = [
-    "HTML",
-    "Css",
-    "JavaScript",
-    "TailwindCss",
-    "ReactJs",
-    "BootStrap",
-    "MUI",
-    "Node.Js",
-    "MongoDB",
-    "MySQL",
-    "Java",
-    "Php",
-  ];
+  const rightRef = useRef(null);
+  useEffect(() => {
+    ScrollReveal().reveal(rightRef.current, {
+      origin: "right",
+      distance: "300px",
+      duration: 3000,
+      delay: 300,
+      opacity: 0,
+      rotate: { x: 360, y: 180 },
+      easing: "ease",
+      reset: true,
+    });
+  }, []);
   return (
     <section id='skills' className='text-center'>
       <Title title='Skills' subTitle='My technical skills' />
@@ -52,7 +34,10 @@ const MySkills = () => {
         })}
       </div>
       {/* For Larger Devices */}
-      <div className=' hidden md:flex md:w-4/5 lg:w-3/5 my-12 mb-24 cursor-pointer flex-wrap m-auto gap-12 justify-center'>
+      <div
+        ref={rightRef}
+        className=' hidden md:flex md:w-4/5 lg:w-3/5 my-12 mb-24 cursor-pointer flex-wrap m-auto gap-12 justify-center'
+      >
         {Object.entries(skillsIcons).map(([name, icon]) => {
           return (
             <div
