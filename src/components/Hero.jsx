@@ -4,17 +4,25 @@ import MyImage from "./MyImage";
 const Hero = () => {
   return (
     <section id='home'>
-      <article className='flex flex-col-reverse text-center sm:text-justify sm:grid sm:grid-cols-2 justify-around items-center sm:mt-44 mb-24'>
-        <article className='mx-12'>
-          <h1 className='text-3xl font-extrabold'>
+      <article className='flex flex-col-reverse text-center sm:text-justify md:grid md:grid-cols-2 justify-around items-center  my-8 sm:my-44'>
+        <article className='mx-12 sm:text-left'>
+          <h1 className='text-3xl  md:hidden font-extrabold'>
             Hi, I am{" "}
-            <span className='text-lime-600'>
+            <span className='text-brightRed'>
               Solomon <span className='block'>Muhye</span>
             </span>
           </h1>
-          <b className='text-sm text-indigo-400 font-light inline-block py-2'>
-            Frontend Developer
-          </b>
+          <h1 className='hidden text-4xl md:block font-extrabold'>
+            Hi,
+            <br />
+            <span>I am </span>
+            <span className='text-brightRed'>
+              Solomon <span className='block'>Muhye</span>
+            </span>
+          </h1>
+          <small className='font-mono inline-block text-orange-400 py-2'>
+            Fullstack Developer
+          </small>
           <p>
             Passionate web developer dedicated to provide a quality work in a
             timely manner.
