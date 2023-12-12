@@ -1,3 +1,4 @@
+import ScrollReveal from "scrollreveal";
 import AboutMe from "./components/AboutMe";
 import ContactMe from "./components/ContactMe";
 import Footer from "./components/Footer";
@@ -9,8 +10,20 @@ import Projects from "./components/Projects";
 import ProjectsXI from "./components/ProjectsXl";
 import ScrollToTop from "./components/ScrollToTop";
 import ScrollDown from "./utils/ScrollDown";
+import { useEffect, useRef } from "react";
 
 function App() {
+  const topRef = useRef(null);
+  useEffect(() => {
+    ScrollReveal().reveal(topRef.current, {
+      origin: "top",
+      distance: "100px",
+      duration: 2000,
+      delay: 300,
+      easing: "ease",
+      reset: true,
+    });
+  }, []);
   return (
     <div className='App'>
       <Header />
@@ -23,12 +36,14 @@ function App() {
         <AboutMe />
         <MySkills />
         <MyQualification />
-        <div className='md:hidden'>
-          <Projects />
-        </div>
-        <div>
-          <ProjectsXI />
-        </div>
+        <article id='projects' ref={topRef}>
+          <div className='md:hidden'>
+            <Projects />
+          </div>
+          <div>
+            <ProjectsXI />
+          </div>
+        </article>
       </main>
       <ContactMe />
       <Footer />
