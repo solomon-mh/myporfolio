@@ -1,11 +1,11 @@
 import { faDownload } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Title from "../utils/Title";
 
 const AboutMe = () => {
   return (
     <section id='about' className='mx-12 text-center py-8'>
-      <b className='block text-2xl'>About Me</b>
-      <small className='inline-block pb-3'>My Introduction</small>
+      <Title title='About Me' subTitle='My introduction' />
       <p>
         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Suscipit
         reprehenderit tenetur, aspernatur dolorum sapiente fugit placeat
