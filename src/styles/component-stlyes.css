@@ -16,7 +16,52 @@
   padding: 4px 14px;
   transition: all 0.5s;
   border-radius: 8px;
+  cursor: pointer;
 }
 .navlinks:hover {
   color: #f26200;
+  padding: 2px 14px;
+}
+.skill-icons:hover {
+  filter: drop-shadow(0 0 8px #cbbdbd);
+  transform: translateY(-4px);
+}
+.arr-to-top {
+  animation: showArrow 2s ease-in;
+}
+
+/* Projects Modal  */
+.projects__modal {
+  position: absolute;
+  left: 0;
+  bottom: -100%;
+  width: 100%;
+  height: 100%;
+  display: none;
+  z-index: 10;
+  background: linear-gradient(
+    180deg,
+    hsla(0, 97%, 49%, 0) 0%,
+    hsla(120, 1%, 56%, 0.8) 120%
+  );
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: bottom 0.5s;
+}
+.projects__card:hover .projects__modal {
+  bottom: 0;
+}
+
+@keyframes showArrow {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100%;
+  }
 }
