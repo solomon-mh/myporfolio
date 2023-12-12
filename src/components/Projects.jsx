@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { myProjects } from "../data/myProjectsInfo";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import { faGreaterThan, faLessThan } from "@fortawesome/free-solid-svg-icons";
+import Title from "../utils/Title";
 
 const Projects = () => {
   const myProjectsList = myProjects.map((projects) => projects);
@@ -17,36 +18,56 @@ const Projects = () => {
 
   return (
     <div className='text-center'>
-      <h1 className='text-4xl font-bold py-2'>Projects</h1>
-      <small className='inline-block font-serif text-orange-400 pb-4'>
-        most recent projects
-      </small>
-      <section className='w-9/10 sm:w-3/4 m-auto flex items-center gap-6'>
+      <Title title='Projects' subTitle='most recent projects' />
+      <section className='w-9/10 sm:w-3/4 m-auto flex items-center'>
         <div className='pr-4'>
           <button onClick={() => handleBtnClick("left")}>
             <i>
-              <FontAwesomeIcon icon={faArrowLeft} />
+              <FontAwesomeIcon
+                icon={faLessThan}
+                style={{ fontSize: "large" }}
+              />
             </i>
           </button>
         </div>
-        <section className='border-2 rounded-2xl p-3'>
-          <div className='relative cursor-pointer'>
-            <img src={myProjectsList[currentProject].image} alt='' />
-            <div className='absolute w-16 text-xs sm:text-base h-16 sm:w-24 sm:h-24 rounded-full grid flex-wrap items-center  bg-brightRed -top-10 -right-10 shadow-lg shadow-slate-600'>
-              {myProjectsList[currentProject].projectTitle}
+        <section className='relative m-auto shadow-md shadow-slate-900 rounded-2xl'>
+          <article className='projects__card overflow-hidden relative'>
+            <div className='relative cursor-pointer'>
+              <div className='rounded-xl max-h-72 rounded-b-none overflow-hidden'>
+                <img
+                  className='w-full h-full'
+                  src={myProjectsList[currentProject].image}
+                  alt='My Projects image'
+                />
+              </div>
             </div>
-          </div>
-          <div className='text-left'>
-            <p className='font-bold py-1.5'>
-              {myProjectsList[currentProject].projectType}
-            </p>
-            <p className='text-sm'>{myProjectsList[currentProject].desc}</p>
+            <div className='text-left p-4'>
+              <p className='font-bold py-1.5'>
+                {myProjectsList[currentProject].projectType}
+              </p>
+              <p className='text-sm'>{myProjectsList[currentProject].desc}</p>
+            </div>
+            <div className='projects__modal text-brightRed'>
+              <h2 className='text-2xl py-1 font-mono font-bold'>
+                {myProjectsList[currentProject].projectTitle}
+              </h2>
+              <h3> {myProjectsList[currentProject].projectType}</h3>
+              <a href='#' className='border-2 rounded-xl px-2 py-1 my-2'>
+                View Demo
+              </a>
+            </div>
+          </article>
+          <div className='absolute w-16 text-xs sm:text-base h-16  rounded-full grid flex-wrap items-center  bg-brightRed -top-8 -right-8 shadow-lg shadow-slate-600 z-30'>
+            {myProjectsList[currentProject].projectTitle}
           </div>
         </section>
         <div className='pl-4'>
           <button onClick={() => handleBtnClick("right")}>
             <i>
-              <FontAwesomeIcon icon={faArrowRight} />
+              <FontAwesomeIcon
+                icon={faGreaterThan}
+                style={{ fontSize: "large" }}
+              />
             </i>
           </button>
         </div>
