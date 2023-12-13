@@ -11,12 +11,23 @@ import ProjectsXI from "./components/ProjectsXl";
 import ScrollToTop from "./components/ScrollToTop";
 import ScrollDown from "./utils/ScrollDown";
 import { useEffect, useRef } from "react";
+import Services from "./components/Services";
 
 function App() {
-  const topRef = useRef(null);
+  const toBottom = useRef(null);
+  const bottomRef = useRef(null);
+
   useEffect(() => {
-    ScrollReveal().reveal(topRef.current, {
-      origin: "top",
+    ScrollReveal().reveal(toBottom.current, {
+      origin: "bottom",
+      distance: "100px",
+      duration: 2000,
+      delay: 300,
+      easing: "ease",
+      reset: true,
+    });
+    ScrollReveal().reveal(bottomRef.current, {
+      origin: "bottom",
       distance: "100px",
       duration: 2000,
       delay: 300,
@@ -27,16 +38,14 @@ function App() {
   return (
     <div className='App'>
       <Header />
-      <figure>
-        <ScrollToTop />
-      </figure>
       <main className='md:w-9/10 m-auto md:my-24 mb-24 md:mt-12'>
         <Hero />
         <ScrollDown />
         <AboutMe />
         <MySkills />
         <MyQualification />
-        <article id='projects' ref={topRef}>
+        <Services />
+        <article id='projects' ref={toBottom}>
           <div className='md:hidden'>
             <Projects />
           </div>
@@ -45,8 +54,11 @@ function App() {
           </div>
         </article>
       </main>
-      <ContactMe />
-      <Footer />
+      <div ref={bottomRef}>
+        <ContactMe />
+        <Footer />
+      </div>
+      <ScrollToTop />
     </div>
   );
 }
