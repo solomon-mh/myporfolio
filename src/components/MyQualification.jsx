@@ -4,6 +4,7 @@ import {
   faChartColumn,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Title from "../utils/Title";
 import Education from "./Education";
 
 const MyQualification = () => {
@@ -15,15 +16,9 @@ const MyQualification = () => {
     return () => clearTimeout(timeout);
   }, [animateSection]);
   return (
-    <section
-      id='qualification'
-      className={`${
-        animateSection === "qualification" ? "section-animation" : ""
-      } text-center my-8`}
-    >
-      <h2 className='text-2xl font-semibold font-mono'>Qualification</h2>
-      <small>My journey</small>
-      <div className='btns flex justify-center gap-4'>
+    <section id='qualification' className='sm:w-4/5 m-auto text-center'>
+      <Title title='Qualification' subTitle='My journey' />
+      <div className='btns flex justify-center gap-8'>
         <button>
           <i className='text-sm px-1'>
             <FontAwesomeIcon icon={faChartColumn} />
