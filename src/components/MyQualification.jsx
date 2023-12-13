@@ -5,9 +5,13 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Title from "../utils/Title";
-import Education from "./Education";
+import { NavLink, Outlet } from "react-router-dom";
 
 const MyQualification = () => {
+  const activeStyle = {
+    color: "#f26200",
+    borderBottom: "2px solid green",
+  };
   const [animateSection, setAnimateSection] = useState("");
   useEffect(() => {
     const timeout = setTimeout(() => {
@@ -19,20 +23,26 @@ const MyQualification = () => {
     <section id='qualification' className='sm:w-4/5 m-auto text-center'>
       <Title title='Qualification' subTitle='My journey' />
       <div className='btns flex justify-center gap-8'>
-        <button>
+        <NavLink
+          style={({ isActive }) => (isActive ? activeStyle : null)}
+          to='/'
+        >
           <i className='text-sm px-1'>
             <FontAwesomeIcon icon={faChartColumn} />
           </i>
           Education
-        </button>
-        <button>
+        </NavLink>
+        <NavLink
+          style={({ isActive }) => (isActive ? activeStyle : null)}
+          to='/work'
+        >
           <i className='text-sm px-1'>
             <FontAwesomeIcon icon={faBagShopping} />
           </i>
           Work
-        </button>
+        </NavLink>
       </div>
-      <Education />
+      <Outlet />
     </section>
   );
 };
