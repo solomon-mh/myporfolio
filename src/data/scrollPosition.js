@@ -1,24 +1,24 @@
 export const homePosition = {
   min: 0,
-  max: 440,
+  max: 455,
 };
 export const AboutPosition = {
-  min: 441,
-  max: 770,
+  min: 460,
+  max: 1270,
 };
 export const SkillsPosition = {
-  min: 775,
-  max: 1040,
+  min: 1275,
+  max: 2470,
 };
 export const ServicePosition = {
-  min: 1042,
-  max: 1580,
+  min: 2475,
+  max: 3010,
 };
 export const ProjectPosition = {
-  min: 1581,
-  max: 2270,
+  min: 3012,
+  max: 4200,
 };
 export const ContactPosition = {
-  min: 2271,
-  max: 3000,
+  min: 4205,
+  max: 4680,
 };
