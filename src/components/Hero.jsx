@@ -3,6 +3,7 @@ import ScrollReveal from "scrollreveal";
 import { faMailBulk } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import MyImage from "./MyImage";
+import Typewriter from "../utils/TypeWriter";
 
 const Hero = () => {
   const leftRef = useRef(null);
@@ -27,11 +28,13 @@ const Hero = () => {
       reset: true,
     });
   }, []);
+  const textToShow =
+    " Passionate Fullstack web developer dedicated to provide quality  work in a timely manner.";
 
   return (
     <section id='home'>
-      <article className='flex flex-col-reverse text-center sm:text-justify md:grid md:grid-cols-2 justify-around items-center  my-8 sm:my-44'>
-        <article className='mx-12 sm:text-left' ref={leftRef}>
+      <article className='flex flex-col-reverse text-center sm:text-justify md:flex-row justify-around items-center my-8 mx-12 gap-6 sm:my-44'>
+        <article className='mx-16 sm:text-left' ref={leftRef}>
           <h1 className='text-3xl  md:hidden font-extrabold'>
             Hi, I am{" "}
             <span className='text-brightRed'>
@@ -49,10 +52,9 @@ const Hero = () => {
           <small className='font-mono inline-block text-orange-400 py-2'>
             Fullstack Developer
           </small>
-          <p>
-            Passionate web developer dedicated to providing quality work in a
-            timely manner.
-          </p>
+          <div>
+            <Typewriter text={textToShow} />
+          </div>
           <button className='bg-indigo-600 my-8 p-2 text-sm rounded-lg text-white'>
             Contact Me
             <i className='px-2'>
