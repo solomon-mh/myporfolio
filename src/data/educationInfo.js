@@ -4,8 +4,7 @@ export const education = [
     takenFrom: "BahirdarUniversity-BIT",
     year: "2019-2024",
   },
-  {},
-  {},
+
   {
     course: "Software Engineering",
     takenFrom: "BahirdarUniversity-BIT",
@@ -16,8 +15,6 @@ export const education = [
     takenFrom: "BahirdarUniversity-BIT",
     year: "2019-2024",
   },
-  {},
-  {},
   {
     course: "Software Engineering",
     takenFrom: "BahirdarUniversity-BIT",
