@@ -1,9 +1,4 @@
-import {
-  faGithub,
-  faInstagram,
-  faLinkedinIn,
-} from "@fortawesome/free-brands-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import MySocialLinks from "./MySocialLinks";
 
 const Footer = () => {
   const scrollTo = (sectionId) => {
@@ -21,7 +16,7 @@ const Footer = () => {
       <div className='mb-12 flex flex-col gap-6'>
         <div
           className='cursor-pointer duration-300 hover:text-sky-600'
-          onClick={() => scrollTo("service")}
+          onClick={() => scrollTo("services")}
         >
           Services
         </div>
@@ -38,11 +33,7 @@ const Footer = () => {
           Contact
         </div>
       </div>
-      <div className='flex gap-6'>
-        <FontAwesomeIcon icon={faLinkedinIn} />
-        <FontAwesomeIcon icon={faGithub} />
-        <FontAwesomeIcon icon={faInstagram} />
-      </div>
+      <MySocialLinks />
       <p className='text-center py-8'>Solomon Muhye</p>
     </div>
   );
