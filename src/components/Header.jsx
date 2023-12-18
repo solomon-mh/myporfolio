@@ -10,7 +10,7 @@ import {
   faTimes,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import {
   homePosition as HP,
   AboutPosition as AP,
@@ -19,8 +19,11 @@ import {
   ProjectPosition as ProjP,
   ContactPosition as CP,
 } from "../data/scrollPosition";
+import { darkModeProvider } from "../App";
 
 const Header = () => {
+  const isDarkMode = useContext(darkModeProvider);
+  // console.log(isDarkMode);
   const [scrollPosition, setScrollPosition] = useState(0);
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -28,6 +31,7 @@ const Header = () => {
     setMenuOpen((prev) => !prev);
   };
 
+  // console.log(scrollPosition);
   useEffect(() => {
     const handleScroll = () => {
       setScrollPosition(window.scrollY);
@@ -43,7 +47,7 @@ const Header = () => {
   }
   return (
     <section>
-      <header className='header hidden  min-w-full left-0 fixed sm:flex justify-between items-center header z-50 bg-headerColor text-white text-xl py-4 px-8 top-0'>
+      <header className='header hidden min-w-full left-0 fixed sm:flex justify-between items-center header z-50 bg-headerColor text-white text-xl py-4 px-8 top-0'>
         <h1>
           Solomon <span className='text-brightRed'>Muhye</span>
         </h1>
@@ -79,7 +83,7 @@ const Header = () => {
             Skills
           </button>
           <button
-            onClick={() => scrollToSection("service")}
+            onClick={() => scrollToSection("services")}
             className={`${
               SrvP.min <= scrollPosition && scrollPosition <= SrvP.max
                 ? "text-brightRed"
@@ -108,7 +112,7 @@ const Header = () => {
           >
             Contact
           </button>
-          <button>
+          <button onClick={() => isDarkMode()}>
             <FontAwesomeIcon
               style={{
                 transform: "rotate(180deg)",
@@ -121,14 +125,14 @@ const Header = () => {
         </nav>
       </header>
       {/* For Mobile Devices / small devices */}
-      <div className='header sm:hidden z-40 fixed justify-between py-4 bottom-0 flex w-full bg-headerColor'>
+      <div className='header md:hidden z-40 fixed justify-between py-4 bottom-0 flex w-full bg-headerColor'>
         <div className='px-4'>
           <h1>
             Solomon <span className='text-brightRed'>Muhye</span>
           </h1>
         </div>
         <div className='px-4 flex gap-3'>
-          <button>
+          <button onClick={() => isDarkMode()}>
             <FontAwesomeIcon
               style={{
                 transform: "rotate(180deg)",
