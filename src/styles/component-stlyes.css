@@ -1,4 +1,4 @@
-.img-container {
+.img__container {
   border-radius: 30% 30% / 80% 80%;
   /* border-top-left-radius: 80%;
   border-top-right-radius: 80%;
@@ -22,11 +22,11 @@
   color: #f26200;
   padding: 2px 14px;
 }
-.skill-icons:hover {
+.skill__icons:hover {
   filter: drop-shadow(0 0 8px #cbbdbd);
   transform: translateY(-4px);
 }
-.arr-to-top {
+.arr__to__top {
   animation: showArrow 2s ease-in;
 }
 
@@ -57,6 +57,55 @@
   bottom: 0;
 }
 
+/* Education */
+.education__timeline {
+  border-left: 2px solid #fff;
+}
+.education__timeline div::before {
+  content: "";
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: white;
+  border: 2px solid white;
+  position: absolute;
+  top: 25px;
+  left: -55px;
+}
+.education__timeline div:after {
+  content: "";
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-color: transparent white transparent transparent;
+  border-width: 8px;
+  position: absolute;
+  left: -17px;
+  top: 22px;
+}
+/* Modal */
+.modal__overlay {
+  position: fixed;
+  box-sizing: content-box;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #e0e0e0;
+  color: Navy;
+  border-radius: 12px;
+  z-index: 1000;
+}
 @keyframes showArrow {
   0% {
     opacity: 0;
