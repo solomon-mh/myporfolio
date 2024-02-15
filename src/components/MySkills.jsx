@@ -41,7 +41,7 @@ const MySkills = () => {
         {Object.entries(skillsIcons).map(([name, icon]) => {
           return (
             <div
-              className='skill-icons duration-500 w-32 h-32 flex flex-col justify-center items-center rounded-full border-2 '
+              className='skill__icons duration-500 w-32 h-32 flex flex-col justify-center items-center rounded-full border-2 '
               key={crypto.randomUUID()}
             >
               <div className='text-4xl '>

@@ -52,7 +52,10 @@ const Projects = () => {
                 {myProjectsList[currentProject].projectTitle}
               </h2>
               <h3> {myProjectsList[currentProject].projectType}</h3>
-              <a href='#' className='border-2 rounded-xl px-2 py-1 my-2'>
+              <a
+                href={`${myProjectsList[currentProject].link}`}
+                className='border-2 rounded-xl px-2 py-1 my-2'
+              >
                 View Demo
               </a>
             </div>

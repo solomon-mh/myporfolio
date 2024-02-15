@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import { useState, useEffect } from "react";
 
-const Typewriter = ({ text, repeatTimes = 4 }) => {
+const Typewriter = ({ text, repeatTimes = 2 }) => {
   const [displayText, setDisplayText] = useState("");
   const [currentIndex, setCurrentIndex] = useState(0);
   const [repeatCount, setRepeatCount] = useState(0);

@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 const ScrollToTop = () => {
   const [showArrow, setShowArrow] = useState(false);
   const [scrollPosition, setScrollPosition] = useState(0);
-  const treshHoldPosition = 100;
+  const treshHoldPosition = 150;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -26,7 +26,7 @@ const ScrollToTop = () => {
     showArrow && (
       <div
         onClick={() => scrollTo("home")}
-        className='arr-to-top fixed bottom-16 right-0 bg-blue-600 p-1.5 rounded mx-5 cursor-pointer'
+        className='arr__to__top fixed bottom-20 right-0 bg-blue-600 p-1.5 z-50 rounded mx-5 cursor-pointer'
       >
         <FontAwesomeIcon icon={faArrowUp} />
       </div>

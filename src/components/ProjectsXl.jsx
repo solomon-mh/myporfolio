@@ -27,7 +27,10 @@ const Projects = () => {
               {projects.projectTitle}
             </h2>
             <h3>{projects.projectType}</h3>
-            <a href='#' className='border-2 rounded-xl px-2 py-1 my-2'>
+            <a
+              href={`${projects.link}`}
+              className='border-2 rounded-xl px-2 py-1 my-2'
+            >
               View Demo
             </a>
           </div>
@@ -40,7 +43,7 @@ const Projects = () => {
   });
 
   return (
-    <div id='projects' className='hidden md:block text-center'>
+    <div className='hidden md:block text-center'>
       <Title title='Projects' subTitle='most recent projects' />
       <section className=' md:grid grid-cols-2 gap-x-1 gap-y-12'>
         {myProjectsList}
