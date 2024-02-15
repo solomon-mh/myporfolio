@@ -8,7 +8,7 @@ export const myProjects = [
     image: projOne,
     projectType: "Business Website",
     desc: "Dynamic business sites that reflect your brand and engage customer.",
-    link: "https://example.com",
+    link: "https://jolly-cascaron-407d66.netlify.app",
   },
   {
     id: 2,
@@ -16,7 +16,7 @@ export const myProjects = [
     image: projTwo,
     projectType: "E-commerce Website Template",
     desc: "Dynamic business sites that reflect your brand and engage customer.Dynamic business sites that reflect your brand and engage customer.",
-    link: "https://example.com",
+    link: "https://lustrous-biscuit-fd717c.netlify.app",
   },
   {
     id: 3,
