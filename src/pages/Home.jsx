@@ -20,16 +20,16 @@ const Home = () => {
   useEffect(() => {
     ScrollReveal().reveal(rightRef.current, {
       origin: "right",
-      distance: "100px",
+      distance: "400px",
       duration: 2000,
       delay: 300,
       rotate: { y: 90 },
       easing: "ease",
-      reset: true,
+      reset: false,
     });
     ScrollReveal().reveal(bottomRef.current, {
       origin: "bottom",
-      distance: "100px",
+      distance: "400px",
       duration: 2000,
       delay: 300,
       easing: "ease",

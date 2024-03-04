@@ -16,7 +16,7 @@ const Hero = () => {
       duration: 1600,
       delay: 100,
       easing: "ease",
-      reset: true,
+      reset: false,
     });
 
     ScrollReveal().reveal(rightRef.current, {

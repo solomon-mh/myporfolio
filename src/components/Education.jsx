@@ -25,7 +25,7 @@ const Education = () => {
       duration: 2000,
       delay: 100,
       easing: "ease",
-      reset: true,
+      reset: false,
     });
   }, []);
   const edu = education.slice(0, visibleCards).map((ed) => {

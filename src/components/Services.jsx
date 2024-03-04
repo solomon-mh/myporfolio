@@ -21,7 +21,7 @@ const Services = () => {
       duration: 2000,
       delay: 300,
       easing: "ease",
-      reset: true,
+      reset: false,
     });
   }, []);
 
