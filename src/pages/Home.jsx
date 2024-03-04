@@ -15,7 +15,6 @@ import ScrollReveal from "scrollreveal";
 
 const Home = () => {
   const rightRef = useRef(null);
-  const bottomRef = useRef(null);
 
   useEffect(() => {
     ScrollReveal().reveal(rightRef.current, {
@@ -26,14 +25,6 @@ const Home = () => {
       rotate: { y: 90 },
       easing: "ease",
       reset: false,
-    });
-    ScrollReveal().reveal(bottomRef.current, {
-      origin: "bottom",
-      distance: "400px",
-      duration: 2000,
-      delay: 300,
-      easing: "ease",
-      reset: true,
     });
   }, []);
   return (
@@ -46,19 +37,16 @@ const Home = () => {
         <MySkills />
         <MyQualification />
         <Services />
-        <article id='projects' ref={rightRef}>
+        <picture id='projects' ref={rightRef}>
           <div className='md:hidden'>
             <Projects />
           </div>
           <div>
             <ProjectsXl />
           </div>
-        </article>
+        </picture>
       </main>
-      <div ref={bottomRef}>
-        <ContactMe />
-        <Footer />
-      </div>
+      <Footer />
       <ScrollToTop />
     </div>
   );
