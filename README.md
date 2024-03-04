@@ -1,4 +1,4 @@
 # React + Vite
-~ my portfolio
-https://silly-mermaid-48ee90.netlify.app/
 
+~ my portfolio
+https://github.com/SolomonMuhyeY
