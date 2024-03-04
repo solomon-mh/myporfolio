@@ -22,6 +22,8 @@ const MySocialLinks = () => {
           <FontAwesomeIcon icon={faInstagram} />
         </a>
         <a
+          target='_blank'
+          rel='noreferrer'
           className='hover:scale-110 hover:text-indigo-600 duration-500'
           href='https://github.com/SolomonMuhyeY'
         >
