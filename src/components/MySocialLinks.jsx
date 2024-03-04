@@ -23,7 +23,7 @@ const MySocialLinks = () => {
         </a>
         <a
           className='hover:scale-110 hover:text-indigo-600 duration-500'
-          href='#github'
+          href='https://github.com/SolomonMuhyeY'
         >
           <FontAwesomeIcon icon={faGithub} />
         </a>
