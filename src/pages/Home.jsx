@@ -7,7 +7,6 @@ import MyQualification from "../components/MyQualification";
 import Services from "../components/Services";
 import Projects from "../components/Projects";
 import ProjectsXl from "../components/ProjectsXl";
-import ContactMe from "../components/ContactMe";
 import Footer from "../components/Footer";
 import ScrollToTop from "../components/ScrollToTop";
 import { useEffect, useRef } from "react";
@@ -24,7 +23,7 @@ const Home = () => {
       delay: 300,
       rotate: { y: 90 },
       easing: "ease",
-      reset: false,
+      reset: true,
     });
   }, []);
   return (

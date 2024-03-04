@@ -7,7 +7,7 @@ const Footer = () => {
   const bottomRef = useRef(null);
   scrollreveal().reveal(bottomRef.current, {
     origin: "bottom",
-    distance: "2000px",
+    distance: "200px",
     duration: 2000,
     delay: 300,
     easing: "ease",
