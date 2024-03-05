@@ -15,7 +15,7 @@ const MySkills = () => {
       opacity: 0,
       rotate: { x: 360, y: 180 },
       easing: "ease",
-      reset: false,
+      reset: true,
     });
   }, []);
   return (
