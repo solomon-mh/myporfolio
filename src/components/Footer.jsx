@@ -1,19 +1,7 @@
-import { useRef } from "react";
 import ContactMe from "./ContactMe";
 import MySocialLinks from "./MySocialLinks";
-import scrollreveal from "scrollreveal";
 
 const Footer = () => {
-  const bottomRef = useRef(null);
-  scrollreveal().reveal(bottomRef.current, {
-    origin: "bottom",
-    distance: "200px",
-    duration: 2000,
-    delay: 300,
-    easing: "ease",
-    reset: true,
-  });
-
   const scrollTo = (sectionId) => {
     const section = document.getElementById(sectionId);
     if (section) {
@@ -21,7 +9,7 @@ const Footer = () => {
     }
   };
   return (
-    <footer ref={bottomRef}>
+    <footer>
       <ContactMe />
       <div className='px-12 mb-20'>
         <div className='mb-8'>

@@ -36,14 +36,14 @@ const Home = () => {
         <MySkills />
         <MyQualification />
         <Services />
-        <picture id='projects' ref={rightRef}>
+        <article id='projects' ref={rightRef}>
           <div className='md:hidden'>
             <Projects />
           </div>
           <div>
             <ProjectsXl />
           </div>
-        </picture>
+        </article>
       </main>
       <Footer />
       <ScrollToTop />
