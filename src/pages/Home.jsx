@@ -20,7 +20,7 @@ const Home = () => {
       origin: "right",
       distance: "400px",
       duration: 2000,
-      delay: 300,
+      delay: 200,
       rotate: { y: 90 },
       easing: "ease",
       reset: true,
