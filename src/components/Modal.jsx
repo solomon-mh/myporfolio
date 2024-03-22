@@ -12,8 +12,11 @@ const Modal = ({ id }) => {
           {/* <h1 className='text-xl text-center md:text-3xl mt-12'></h1> */}
           <ul className='my-4 text-left w-fit m-auto'>
             {service.services.map((service) => (
-              <li key={crypto.randomUUID()} className='my-5'>
-                <i className='text-purple-600 mr-4 py-1 px-1.5 w-6 h-6 border-2 border-green-500 rounded-full'>
+              <li
+                key={crypto.randomUUID()}
+                className='my-5 text-xs sm:text-base'
+              >
+                <i className='text-purple-600  mr-4 py-1 px-1.5 w-6 h-6 border-2 border-green-500 rounded-full'>
                   <FontAwesomeIcon icon={faCheck} />
                 </i>
                 {service}
