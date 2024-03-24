@@ -1,5 +1,5 @@
 import { faLinkedin, faTwitch } from "@fortawesome/free-brands-svg-icons";
-import { faMailBulk } from "@fortawesome/free-solid-svg-icons";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Title from "../utils/Title";
 
@@ -25,11 +25,12 @@ const ContactMe = () => {
           <Title title='Contact Me' subTitle='get in touch' />
           <div className='text-left flex gap-2 my-2 cursor-pointer'>
             <div>
-              <FontAwesomeIcon icon={faMailBulk} />
+              <FontAwesomeIcon icon={faEnvelope} />
             </div>
             <div>
-              <p className='leading-3'>Email</p>
-              <b className='text-xs'>solomon_muhye_wd@gmail.com</b>
+              <a href='mailto:solomon_muhye_wd@gmail.com'>
+                solomon_muhye_wd@gmail.com
+              </a>
             </div>
           </div>
           <div className='text-left flex gap-2 cursor-pointer'>
