@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 import ScrollReveal from "scrollreveal";
-import { faMailBulk } from "@fortawesome/free-solid-svg-icons";
+import { faFileDownload } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import MyImage from "./MyImage";
 import Typewriter from "../utils/TypeWriter";
@@ -30,7 +30,16 @@ const Hero = () => {
   }, []);
   const textToShow =
     " Passionate Fullstack web developer dedicated to provide quality  work in a timely manner.";
+  const cvUrl = "/cv/SOLOMON_MUHYE_CV.pdf";
 
+  const handleDownload = () => {
+    const link = document.createElement("a");
+    link.href = cvUrl;
+    link.download = "Solomon_Muhye_CV.pdf"; // Set the desired file name
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
   return (
     <section
       className='flex flex-col-reverse text-center sm:text-justify md:flex-row justify-around items-center my-8 mx-12 gap-12 sm:my-44'
@@ -38,7 +47,7 @@ const Hero = () => {
     >
       <article ref={leftRef} className='mx-16 sm:text-left'>
         <h1 className='text-3xl  md:hidden font-extrabold'>
-          Hi, I am{" "}
+          Hi, I am
           <span className='text-brightRed'>
             Solomon <span className='block'>Muhye</span>
           </span>
@@ -57,10 +66,13 @@ const Hero = () => {
         <div>
           <Typewriter text={textToShow} />
         </div>
-        <button className='bg-indigo-600 my-8 p-2 text-sm rounded-lg text-white'>
-          Contact Me
+        <button
+          onClick={handleDownload}
+          className='bg-indigo-600 my-8 p-2 text-sm rounded-lg text-white'
+        >
+          Download CV
           <i className='px-2'>
-            <FontAwesomeIcon icon={faMailBulk} />
+            <FontAwesomeIcon icon={faFileDownload} />
           </i>
         </button>
       </article>
