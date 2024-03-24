@@ -4,6 +4,7 @@ import { faFileDownload } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import MyImage from "./MyImage";
 import Typewriter from "../utils/TypeWriter";
+import { handleDownload } from "../utils/cvDownloader";
 
 const Hero = () => {
   const leftRef = useRef(null);
@@ -30,16 +31,7 @@ const Hero = () => {
   }, []);
   const textToShow =
     " Passionate Fullstack web developer dedicated to provide quality  work in a timely manner.";
-  const cvUrl = "/cv/SOLOMON_MUHYE_CV.pdf";
 
-  const handleDownload = () => {
-    const link = document.createElement("a");
-    link.href = cvUrl;
-    link.download = "Solomon_Muhye_CV.pdf"; // Set the desired file name
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  };
   return (
     <section
       className='flex flex-col-reverse text-center sm:text-justify md:flex-row justify-around items-center my-8 mx-12 gap-12 sm:my-44'
