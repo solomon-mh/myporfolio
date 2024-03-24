@@ -8,7 +8,7 @@ export const myProjects = [
     image: projOne,
     projectType: "Business Website",
     desc: "Dynamic business sites that reflect your brand and engage customer.",
-    link: "https://jolly-cascaron-407d66.netlify.app",
+    link: "https://jibyteaiwebsiteclone.netlify.app/",
   },
   {
     id: 2,
