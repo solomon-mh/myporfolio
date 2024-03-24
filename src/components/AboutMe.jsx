@@ -1,11 +1,20 @@
 import ScrollReveal from "scrollreveal";
-import { faDownload } from "@fortawesome/free-solid-svg-icons";
+import { faCircleArrowDown } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Title from "../utils/Title";
 import MyImage from "./MyImage";
 import { useEffect, useRef } from "react";
 
 const AboutMe = () => {
+  const cvUrl = "/cv/SOLOMON_MUHYE_CV.pdf";
+  const handleDownload = () => {
+    const link = document.createElement("a");
+    link.href = cvUrl;
+    link.download = "Solomon_Muhye_CV.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
   const rightRef = useRef(null);
   const leftRef = useRef(null);
   useEffect(() => {
@@ -59,10 +68,13 @@ const AboutMe = () => {
           </div>
         </div>
         <div className='resume-btn'>
-          <button className='bg-indigo-600 my-6 p-2 text-sm rounded-lg text-white'>
-            Download Resume
+          <button
+            onClick={handleDownload}
+            className='bg-indigo-600 my-6 p-2 text-sm rounded-lg text-white'
+          >
+            Download CV
             <i className='text-xs px-1'>
-              <FontAwesomeIcon icon={faDownload} />
+              <FontAwesomeIcon icon={faCircleArrowDown} />
             </i>
           </button>
         </div>
