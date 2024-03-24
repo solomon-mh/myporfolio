@@ -4,17 +4,9 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Title from "../utils/Title";
 import MyImage from "./MyImage";
 import { useEffect, useRef } from "react";
+import { handleDownload } from "../utils/cvDownloader";
 
 const AboutMe = () => {
-  const cvUrl = "/cv/SOLOMON_MUHYE_CV.pdf";
-  const handleDownload = () => {
-    const link = document.createElement("a");
-    link.href = cvUrl;
-    link.download = "Solomon_Muhye_CV.pdf";
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  };
   const rightRef = useRef(null);
   const leftRef = useRef(null);
   useEffect(() => {
