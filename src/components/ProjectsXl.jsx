@@ -30,7 +30,7 @@ const Projects = () => {
             <a
               target='_blank'
               href={`${projects.link}`}
-              className='border-2 rounded-xl px-2 py-1 my-2'
+              className='border-2 rounded-xl px-2 py-1 my-2' rel="noreferrer"
             >
               View Demo
             </a>
