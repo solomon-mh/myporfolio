@@ -28,6 +28,7 @@ const Projects = () => {
             </h2>
             <h3>{projects.projectType}</h3>
             <a
+              target='_blank'
               href={`${projects.link}`}
               className='border-2 rounded-xl px-2 py-1 my-2'
             >
