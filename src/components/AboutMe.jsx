@@ -37,13 +37,13 @@ const AboutMe = () => {
       </figure>
       <article ref={leftRef} className='md:w-3/5 m-auto leading-7'>
         <p>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Suscipit
-          reprehenderit tenetur, aspernatur dolorum sapiente fugit placeat
-          pariatur, deleniti eligendi quod eius voluptatum hic impedit enim,
-          labore modi voluptatibus velit necessitatibus atque ut. Accusamus vel
-          quaerat maxime iste. Facilis, architecto distinctio obcaecati quasi
-          libero quisquam, aliquid doloremque deserunt maiores, nisi
-          necessitatibus!
+          Hi, I&apos;m Solomon, a dedicated and passionate software engineer,
+          web and mobile app developer. I thrive on solving problems and
+          creating innovative solutions. With a focus on quality and efficiency,
+          I am committed to delivering high-performance software products. My
+          goal is to make a meaningful impact through technology and to
+          continuously expand my skills to stay at the forefront of the
+          industry.
         </p>
         <div className='experience gap-2 sm:gap-8 w-4/5 m-auto flex px-6 mt-6 leading-4 justify-center'>
           <div className='yrs'>
