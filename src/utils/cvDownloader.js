@@ -1,4 +1,4 @@
-const cvUrl = "/public/cv/SOLOMON_MUHYE_CV.pdf";
+const cvUrl = "/cv/SOLOMON_MUHYE_CV.pdf";
 export const handleDownload = () => {
   const link = document.createElement("a");
   link.href = cvUrl;
