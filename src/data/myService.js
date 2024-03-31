@@ -39,4 +39,14 @@ export const myServices = [
       "Offline Support and Syncing",
     ],
   },
+  {
+    id: 5,
+    serviceName: "UI/Ux Designer",
+    services: [
+      "User Interface (UI) Design",
+      "User Experience (UX) Design",
+      "Wireframing and Prototyping",
+      "Usability Testing and Research",
+    ],
+  },
 ];
