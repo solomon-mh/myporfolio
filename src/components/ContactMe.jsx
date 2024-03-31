@@ -13,10 +13,15 @@ const ContactMe = () => {
         </p>
         <div>
           <button className='bg-indigo-600 my-8 p-2 text-sm rounded-lg text-white'>
-            Contact Me
-            <i className='px-2'>
-              <FontAwesomeIcon icon={faTwitch} />
-            </i>
+            <a
+              href='mailto:solomon.muhye.wd@example.com'
+              className='bg-indigo-600 my-8 p-2 text-sm rounded-lg text-white'
+            >
+              Contact Me
+              <i className='px-2'>
+                <FontAwesomeIcon icon={faTwitch} />
+              </i>
+            </a>
           </button>
         </div>
       </div>
