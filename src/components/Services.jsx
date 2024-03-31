@@ -18,7 +18,7 @@ const Services = () => {
       origin: "right",
       distance: "100px",
       rotate: { y: 90 },
-      duration: 2000,
+      duration: 1500,
       delay: 300,
       easing: "ease",
       reset: true,
@@ -31,14 +31,13 @@ const Services = () => {
     setIsModalOpen((prev) => !prev);
     if (e.target.name === "view more") {
       setId(e.target.id);
-      // console.log(e.target.id);
     }
   };
   const services = myServices.map((service) => {
     return (
       <div
         key={service.id}
-        className='w-54 px-6 py-4 shadow-md shadow-slate-700 cursor-pointer duration-500 hover:scale-105 hover:translate-y-1'
+        className='w-54 px-6 py-4 shadow-md shadow-slate-500 cursor-pointer duration-500 hover:scale-105 hover:translate-y-1'
       >
         <div>
           <div className='mb-2'>
@@ -62,7 +61,7 @@ const Services = () => {
     <section id='services' className='my-16 text-center'>
       <Title title='My Services' subTitle='Here is what I can do' />
       <div ref={rightRef}>
-        <article className='lg:gap-12 m-auto grid gap-8 sm:grid-cols-2 py-6 px-12 '>
+        <article className='lg:gap-12 m-auto  grid gap-8 sm:grid-cols-2 py-6 px-12 '>
           {services}
         </article>
         <div className='modals'>
