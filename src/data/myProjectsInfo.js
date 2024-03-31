@@ -7,7 +7,7 @@ export const myProjects = [
     projectTitle: "JiByte Ai Clone",
     image: projOne,
     projectType: "Business Website",
-    desc: "Dynamic business sites that reflect your brand and engage customer.",
+    desc: "an AI website clone that exactly clone the ui of the jibyteai website with RWD.",
     link: "https://jibyteaiwebsitecloe.netlify.app/",
   },
   {
@@ -23,7 +23,7 @@ export const myProjects = [
     projectTitle: "#Vanlife",
     image: projThree,
     projectType: "Business Website",
-    desc: "Dynamic business sites that reflect your brand and engage customer.Dynamic business sites that reflect your brand and engage customer.Dynamic business sites that reflect your brand and engage customer.",
+    desc: "Dynamic business sites that reflect your brand and engage customer. It is a website for car Rent for vacation and other stuff. The site implemts Routing and other things ...",
     link: "https://example.com",
   },
 ];
