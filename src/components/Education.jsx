@@ -35,7 +35,7 @@ const Education = () => {
         key={crypto.randomUUID()}
       >
         <b className='block'>{ed.course}</b>
-        <small className='block font-extralight pb-2'>{ed.takenFrom}</small>
+        <small className='block font-extralight pb-2'>{ed.institution}</small>
         <small className='font-extralight opacity-50'>
           <i className='px-1 text-gray-500'>
             <FontAwesomeIcon icon={faCalendar} />
