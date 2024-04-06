@@ -12,10 +12,10 @@ export const myProjects = [
   },
   {
     id: 2,
-    projectTitle: "E-commerce Website",
+    projectTitle: "RegalCanvas",
     image: projTwo,
-    projectType: "E-commerce Website Template",
-    desc: "Dynamic business sites that reflect your brand and engage customer.Dynamic business sites that reflect your brand and engage customer.",
+    projectType: "RegalCanvas",
+    desc: "A project that represents a platform or template designed for creating striking and impressive portfolios or websites, akin to a canvas upon which one can showcase their skills, talents, and achievements in a regal manner.",
     link: "https://lustrous-biscuit-fd717c.netlify.app",
   },
   {
