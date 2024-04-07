@@ -22,7 +22,7 @@ const Hero = () => {
 
     ScrollReveal().reveal(rightRef.current, {
       origin: "right",
-      distance: "200px",
+      distance: "150px",
       duration: 1600,
       delay: 100,
       easing: "ease",
@@ -34,7 +34,7 @@ const Hero = () => {
 
   return (
     <section
-      className='flex flex-col-reverse text-center sm:text-justify md:flex-row justify-around items-center my-8 mx-12 gap-12 sm:my-44'
+      className='flex flex-col-reverse text-center sm:text-justify md:flex-row justify-around items-center my-8 mx-12 sm:my-44'
       id='home'
     >
       <article ref={leftRef} className='mx-16 sm:text-left'>
