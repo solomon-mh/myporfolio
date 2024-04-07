@@ -13,8 +13,9 @@ export const mySkills = [
   "HTML",
   "Css",
   "JavaScript",
-  "TailwindCss",
+  "Tailwind",
   "ReactJs",
+  "Next.js",
   "BootStrap",
   "MUI",
   "Node.Js",
@@ -22,6 +23,7 @@ export const mySkills = [
   "MySQL",
   "Java",
   "Php",
+  "Flutter",
 ];
 export const skillsIcons = {
   HTML5: faHtml5,
