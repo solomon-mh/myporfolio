@@ -46,14 +46,14 @@ const Header = () => {
     }
   }
   return (
-    <section>
+    <section id='nav'>
       <header className='header hidden min-w-full left-0 fixed sm:flex justify-between items-center header z-50 bg-headerColor text-white text-xl py-4 px-8 top-0'>
         <h1>
           Solomon <span className='text-brightRed'>Muhye</span>
         </h1>
         <nav className='hidden md:block'>
           <button
-            onClick={() => scrollToSection("home")}
+            onClick={() => scrollToSection("nav")}
             className={`${
               HP.min <= scrollPosition && scrollPosition <= HP.max
                 ? "text-brightRed"
