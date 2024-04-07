@@ -25,8 +25,8 @@ const ScrollToTop = () => {
   return (
     showArrow && (
       <div
-        onClick={() => scrollTo("home")}
-        className='arr__to__top fixed bottom-20 right-0 bg-blue-600 p-1.5 z-50 rounded mx-5 cursor-pointer'
+        onClick={() => scrollTo("nav")}
+        className='arr__to__top fixed bottom-20 right-0 w-12 h-12 flex items-center justify-center bg-gray-700 z-50 rounded-full mx-5 cursor-pointer'
       >
         <FontAwesomeIcon icon={faArrowUp} />
       </div>
