@@ -37,8 +37,8 @@ const Projects = () => {
             </a>
           </div>
         </div>
-        <div className='absolute w-16 text-xs sm:text-base h-16 sm:w-24 sm:h-24 z-30 rounded-full grid flex-wrap items-center  bg-brightRed -top-10 -right-10 shadow-lg shadow-slate-600'>
-          {projects.projectTitle}
+        <div className='absolute w-16 text-xs sm:text-base h-16 sm:w-24 sm:h-24 z-30 rounded-full grid flex-wrap items-center bg-brightRed -top-10 -right-10 shadow-lg shadow-slate-600'>
+          <span className='truncate'>{projects.projectTitle}</span>
         </div>
       </div>
     );
