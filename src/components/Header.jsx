@@ -7,6 +7,7 @@ import {
   faImage,
   faMoon,
   faNavicon,
+  faSun,
   faTimes,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -22,8 +23,8 @@ import {
 import { darkModeProvider } from "../App";
 
 const Header = () => {
-  const isDarkMode = useContext(darkModeProvider);
-  // console.log(isDarkMode);
+  const { toggleDarkMode, darkMode } = useContext(darkModeProvider);
+  // console.log(toggleDarkMode);
   const [scrollPosition, setScrollPosition] = useState(0);
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -112,15 +113,28 @@ const Header = () => {
           >
             Contact
           </button>
-          <button onClick={() => isDarkMode()}>
-            <FontAwesomeIcon
-              style={{
-                transform: "rotate(180deg)",
-                position: "relative",
-                top: "4px",
-              }}
-              icon={faMoon}
-            />
+          <button onClick={() => toggleDarkMode()}>
+            {darkMode ? (
+              <FontAwesomeIcon
+                style={{
+                  transform: "rotate(180deg)",
+                  position: "relative",
+                  top: "4px",
+                }}
+                className={`${darkMode ? "" : "text-black"}`}
+                icon={faSun}
+              />
+            ) : (
+              <FontAwesomeIcon
+                style={{
+                  transform: "rotate(180deg)",
+                  position: "relative",
+                  top: "4px",
+                }}
+                className={`${darkMode ? "" : "text-black"}`}
+                icon={faMoon}
+              />
+            )}
           </button>
         </nav>
       </header>
@@ -132,13 +146,22 @@ const Header = () => {
           </h1>
         </div>
         <div className='px-4 flex gap-3'>
-          <button onClick={() => isDarkMode()}>
-            <FontAwesomeIcon
-              style={{
-                transform: "rotate(180deg)",
-              }}
-              icon={faMoon}
-            />
+          <button onClick={() => toggleDarkMode()}>
+            {darkMode ? (
+              <FontAwesomeIcon
+                style={{
+                  transform: "rotate(180deg)",
+                }}
+                icon={faSun}
+              />
+            ) : (
+              <FontAwesomeIcon
+                style={{
+                  transform: "rotate(180deg)",
+                }}
+                icon={faMoon}
+              />
+            )}
           </button>
           <div
             className='z-50 text-brightRed cursor-pointer'
