@@ -175,7 +175,11 @@ const Header = () => {
           </div>
         </div>
         {menuOpen && (
-          <div className='grid grid-cols-3 gap-6 px-16 py-4 pb-8 w-full fixed bottom-0 bg-slate-900 z-30'>
+          <div
+            className={`grid grid-cols-3 gap-6 px-16 py-4 pb-8 w-full fixed bottom-0 bg-slate-900 z-30 ${
+              darkMode ? "" : "bg-slate-400"
+            }`}
+          >
             <div
               onClick={() => scrollToSection("home")}
               className={`${
