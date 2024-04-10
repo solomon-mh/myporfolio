@@ -1,6 +1,13 @@
 import { faMouse } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import "../styles/component-stlyes.css";
+import styled from "styled-components";
+
+const StyledDiv = styled.div`
+  margin: "0 12px";
+  font-weight: 900;
+  font-size: "6px";
+  background-color: "red";
+`;
 const ScrollDown = () => {
   const scrollTo = (sectionId) => {
     const section = document.getElementById(sectionId);
@@ -9,7 +16,7 @@ const ScrollDown = () => {
     }
   };
   return (
-    <div className='mx-12 font-extrabold text-sm'>
+    <StyledDiv>
       <button
         onClick={() => scrollTo("qualification")}
         className='transition-all duration-500 hover:text-indigo-400'
@@ -19,7 +26,7 @@ const ScrollDown = () => {
         </i>
         Scroll Down <span className='text-lg'>&darr;</span>
       </button>
-    </div>
+    </StyledDiv>
   );
 };
 
