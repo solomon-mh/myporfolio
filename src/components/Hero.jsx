@@ -23,7 +23,7 @@ const Hero = () => {
     ScrollReveal().reveal(rightRef.current, {
       origin: "right",
       distance: "150px",
-      duration: 1600,
+      duration: 2000,
       delay: 500,
       easing: "ease",
       reset: true,
