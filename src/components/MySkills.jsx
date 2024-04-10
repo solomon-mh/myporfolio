@@ -1,10 +1,12 @@
 import ScrollReveal from "scrollreveal";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Title from "../utils/Title";
+import { darkModeProvider } from "../App";
 import { mySkills, skillsIcons } from "../data/skills";
-import { useEffect, useRef } from "react";
+import { useContext, useEffect, useRef } from "react";
 
 const MySkills = () => {
+  const { darkMode } = useContext(darkModeProvider);
   const rightRef = useRef(null);
   useEffect(() => {
     ScrollReveal().reveal(rightRef.current, {
@@ -36,12 +38,14 @@ const MySkills = () => {
       {/* For Larger Devices */}
       <div
         ref={rightRef}
-        className=' hidden md:flex md:w-4/5 lg:w-3/5 my-12 mb-24 cursor-pointer flex-wrap m-auto gap-12 justify-center'
+        className='hidden md:flex md:w-4/5 lg:w-3/5 my-12 mb-24 cursor-pointer flex-wrap m-auto gap-12 justify-center'
       >
         {Object.entries(skillsIcons).map(([name, icon]) => {
           return (
             <div
-              className='skill__icons duration-500 w-32 h-32 flex flex-col justify-center items-center rounded-full border-2 '
+              className={`skill__icons ${
+                darkMode ? "" : "bg-stone-200"
+              }  duration-500 w-32 h-32 flex flex-col justify-center items-center rounded-full border-2 `}
               key={crypto.randomUUID()}
             >
               <div className='text-4xl '>
