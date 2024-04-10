@@ -3,16 +3,15 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styled from "styled-components";
 
 const StyledDiv = styled.div`
-  margin: "0 12px";
+  margin: 0 12px;
   font-weight: 900;
-  font-size: "6px";
-  background-color: "red";
+  font-size: small;
 `;
 const StyledButton = styled.button`
-  transition: "all";
+  transition: all;
   transition-duration: 0.5s;
   &:hover {
-    color: "indigo";
+    color: #8576ff;
   }
 `;
 const ScrollDown = () => {
