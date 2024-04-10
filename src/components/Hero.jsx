@@ -24,7 +24,7 @@ const Hero = () => {
       origin: "right",
       distance: "150px",
       duration: 1600,
-      delay: 100,
+      delay: 500,
       easing: "ease",
       reset: true,
     });
