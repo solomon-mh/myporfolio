@@ -48,10 +48,8 @@ const MySkills = () => {
               }  duration-500 w-32 h-32 flex flex-col justify-center items-center rounded-full border-2 `}
               key={crypto.randomUUID()}
             >
-              <div className='text-4xl '>
-                <FontAwesomeIcon icon={icon} />
-              </div>
-              <p>{name}</p>
+              <FontAwesomeIcon className='text-3xl' icon={icon} />
+              <p className='italic'>{name}</p>
             </div>
           );
         })}
