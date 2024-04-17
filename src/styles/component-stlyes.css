@@ -6,8 +6,8 @@
   border-bottom-right-radius: 20%; */
 }
 .header {
-  -webkit-backdrop-filter: blur(24px);
-  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
 }
 .navlinks {
   font-size: small;
@@ -23,7 +23,7 @@
   padding: 2px 14px;
 }
 .skill__icons:hover {
-  filter: drop-shadow(0 0 8px #cbbdbd);
+  /* filter: drop-shadow(0 0 2px #eee); */
   transform: translateY(-4px);
 }
 .arr__to__top {
