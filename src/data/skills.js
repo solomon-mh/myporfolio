@@ -8,7 +8,6 @@ import {
   faPhp,
   faReact,
 } from "@fortawesome/free-brands-svg-icons";
-import { faWind } from "@fortawesome/free-solid-svg-icons";
 export const mySkills = [
   "HTML",
   "Css",
@@ -28,10 +27,11 @@ export const mySkills = [
 export const skillsIcons = {
   HTML5: faHtml5,
   Css: faCss3,
-  TailwindCss: faWind,
+  TailwindCss: "taiwindcss",
   Bootstrap: faBootstrap,
   Javascript: faJs,
   React: faReact,
+  "Next.Js": "Next.js",
   Node: faNode,
   java: faJava,
   Php: faPhp,
