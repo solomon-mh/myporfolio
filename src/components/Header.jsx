@@ -5,12 +5,11 @@ import {
   faEnvelopeOpenText,
   faHome,
   faImage,
-  faMoon,
   faNavicon,
-  faSun,
   faTimes,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { MoonIcon, SunIcon } from "@heroicons/react/24/outline";
 import { useContext, useEffect, useState } from "react";
 import {
   homePosition as HP,
@@ -52,7 +51,7 @@ const Header = () => {
         <h1>
           Solomon <span className='text-brightRed'>Muhye</span>
         </h1>
-        <nav className='hidden md:block'>
+        <nav className='hidden md:blmock md:flex'>
           <button
             onClick={() => scrollToSection("nav")}
             className={`${
@@ -115,25 +114,9 @@ const Header = () => {
           </button>
           <button onClick={() => toggleDarkMode()}>
             {darkMode ? (
-              <FontAwesomeIcon
-                style={{
-                  transform: "rotate(180deg)",
-                  position: "relative",
-                  top: "4px",
-                }}
-                className={`${darkMode ? "" : "text-black"}`}
-                icon={faSun}
-              />
+              <SunIcon className='w-6 h-6' />
             ) : (
-              <FontAwesomeIcon
-                style={{
-                  transform: "rotate(180deg)",
-                  position: "relative",
-                  top: "4px",
-                }}
-                className={`${darkMode ? "" : "text-black"}`}
-                icon={faMoon}
-              />
+              <MoonIcon className='w-6 h-6 rotate-180' />
             )}
           </button>
         </nav>
@@ -148,19 +131,9 @@ const Header = () => {
         <div className='px-4 flex gap-3'>
           <button onClick={() => toggleDarkMode()}>
             {darkMode ? (
-              <FontAwesomeIcon
-                style={{
-                  transform: "rotate(180deg)",
-                }}
-                icon={faSun}
-              />
+              <SunIcon className='w-6 h-6' />
             ) : (
-              <FontAwesomeIcon
-                style={{
-                  transform: "rotate(180deg)",
-                }}
-                icon={faMoon}
-              />
+              <MoonIcon className='w-6 h-6 rotate-180' />
             )}
           </button>
           <div
