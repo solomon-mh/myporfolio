@@ -122,9 +122,13 @@ const Header = () => {
         </nav>
       </header>
       {/* For Mobile Devices / small devices */}
-      <div className='header md:hidden z-40 fixed justify-between py-4 bottom-0 flex w-full bg-headerColor'>
+      <div
+        className={`header fixed md:hidden z-40  justify-between py-4 top-0 flex w-full ${
+          darkMode ? "bg-headerColor" : "bg-slate-100"
+        } `}
+      >
         <div className='px-4'>
-          <h1>
+          <h1 className=''>
             Solomon <span className='text-brightRed'>Muhye</span>
           </h1>
         </div>
@@ -137,7 +141,7 @@ const Header = () => {
             )}
           </button>
           <div
-            className='z-50 text-brightRed cursor-pointer'
+            className='z-50 py-1 px-2 text-brightRed cursor-pointer hover:outline-double'
             onClick={() => toggleMenu()}
           >
             {menuOpen ? (
@@ -149,8 +153,8 @@ const Header = () => {
         </div>
         {menuOpen && (
           <div
-            className={`grid grid-cols-3 gap-6 px-16 py-4 pb-8 w-full fixed bottom-0 bg-slate-900 z-30 ${
-              darkMode ? "" : "bg-slate-400"
+            className={`flex fixed top-full right-0 gap-8 flex-col px-10 py-4 pb-8 h-screen w-fit  ${
+              darkMode ? "bg-headerColor z-30" : "bg-slate-100"
             }`}
           >
             <div
@@ -162,7 +166,7 @@ const Header = () => {
               } navlinks`}
             >
               <FontAwesomeIcon icon={faHome} />
-              <p> Home</p>
+              <span className='inline-block px-2'> Home</span>
             </div>
             <div
               onClick={() => scrollToSection("about")}
@@ -173,7 +177,7 @@ const Header = () => {
               } navlinks`}
             >
               <FontAwesomeIcon icon={faChalkboardUser} />
-              <p> About</p>
+              <span className='inline-block px-2'> About</span>
             </div>
             <div
               onClick={() => scrollToSection("skills")}
@@ -184,7 +188,7 @@ const Header = () => {
               } navlinks`}
             >
               <FontAwesomeIcon icon={faEnvelopeOpenText} />
-              <p> Skills</p>
+              <span className='inline-block px-2'> Skills</span>
             </div>
             <div
               onClick={() => scrollToSection("services")}
@@ -195,7 +199,7 @@ const Header = () => {
               } navlinks`}
             >
               <FontAwesomeIcon icon={faBagShopping} />
-              <p> Services</p>
+              <span className='inline-block px-2'> Services</span>
             </div>
             <div
               onClick={() => scrollToSection("projects")}
@@ -206,7 +210,7 @@ const Header = () => {
               } navlinks`}
             >
               <FontAwesomeIcon icon={faImage} />
-              <p>Projects</p>
+              <span className='inline-block px-2'>Projects</span>
             </div>
             <div
               onClick={() => scrollToSection("contact")}
@@ -217,7 +221,7 @@ const Header = () => {
               } navlinks`}
             >
               <FontAwesomeIcon icon={faContactBook} />
-              <p>Contact</p>
+              <span className='inline-block px-2'>Contact</span>
             </div>
           </div>
         )}
