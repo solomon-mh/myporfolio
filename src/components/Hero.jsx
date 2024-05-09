@@ -1,10 +1,10 @@
 import { useEffect, useRef } from "react";
 import ScrollReveal from "scrollreveal";
-import { faFileDownload } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import MyImage from "./MyImage";
 import Typewriter from "../utils/TypeWriter";
-import { handleDownload } from "../utils/cvDownloader";
+import { faGithub, faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
+import TechStack from "./TechStack";
 
 const Hero = () => {
   const leftRef = useRef(null);
@@ -30,48 +30,69 @@ const Hero = () => {
     });
   }, []);
   const textToShow =
-    " Passionate Fullstack web developer dedicated to provide quality  work in a timely manner.";
+    "Passionate Fullstack web developer dedicated to providing quality work in a timely manner.";
 
   return (
-    <section
-      className='flex flex-col-reverse text-center sm:text-justify md:flex-row justify-around items-center my-8 mx-12 sm:my-44'
-      id='home'
-    >
-      <article ref={leftRef} className='mx-16 sm:text-left'>
-        <h1 className='text-3xl  md:hidden font-extrabold'>
-          Hi, I am
-          <span className='text-brightRed'>
-            Solomon <span className='block'>Muhye</span>
-          </span>
-        </h1>
-        <h1 className='hidden text-4xl md:block font-extrabold'>
-          Hi,
-          <br />
-          <span>I am </span>
-          <span className='text-brightRed'>
-            Solomon <span className='block'>Muhye</span>
-          </span>
-        </h1>
-        <small className='font-mono inline-block text-orange-400 py-2'>
-          Fullstack Developer
-        </small>
-        <div>
-          <Typewriter text={textToShow} />
-        </div>
-        <button
-          onClick={handleDownload}
-          className='bg-indigo-600 my-8 p-2 text-sm rounded-lg text-white'
-        >
-          Download CV
-          <i className='px-2'>
-            <FontAwesomeIcon icon={faFileDownload} />
-          </i>
-        </button>
+    <div className='py-16 md:py-24'>
+      <article
+        className='flex flex-col-reverse md:flex-row justify-between items-center w-4/5 mx-auto'
+        id='home'
+      >
+        <section ref={leftRef} className='md:w-1/2 text-center md:text-left'>
+          <h1 className='text-3xl  md:hidden font-extrabold'>
+            Hi, I am
+            <span className='text-brightRed'>
+              Solomon <span className='block'>Muhye</span>
+            </span>
+          </h1>
+          <h1 className='hidden text-4xl md:block font-extrabold'>
+            Hi,
+            <br />
+            <span>I am </span>
+            <span className='text-brightRed'>
+              Solomon <span className='block'>Muhye</span>
+            </span>
+          </h1>
+          <small className='font-mono inline-block text-orange-400 mb-4'>
+            Fullstack Developer
+          </small>
+          <div className='mb-8'>
+            <Typewriter text={textToShow} />
+          </div>
+          <div className='flex justify-center md:justify-start gap-4'>
+            <a
+              href='https://www.linkedin.com/in/solomonmuhye'
+              target='_blank'
+              rel='noopener noreferrer'
+              className='bg-blue-600 hover:bg-blue-700 px-4 py-3 text-sm rounded-lg text-white flex items-center'
+            >
+              <i className='pr-2'>
+                <FontAwesomeIcon icon={faLinkedinIn} />
+              </i>
+              LinkedIn
+            </a>
+            <a
+              href='https://github.com/SolomonMuhyeY'
+              target='_blank'
+              rel='noopener noreferrer'
+              className='bg-gray-800 hover:bg-gray-900 px-4 py-3 text-sm rounded-lg text-white flex items-center'
+            >
+              <i className='pr-2'>
+                <FontAwesomeIcon icon={faGithub} />
+              </i>
+              GitHub
+            </a>
+          </div>
+        </section>
+        <section ref={rightRef} className='md:w-1/2 mb-8 md:mb-0'>
+          <MyImage />
+        </section>
       </article>
-      <article ref={rightRef}>
-        <MyImage />
-      </article>
-    </section>
+      <div className='flex my-8 sm:my-1 justify-center items-center gap-6'>
+        <p className='text-lg font-semibold'>My Tech Stack</p>
+        <TechStack />
+      </div>
+    </div>
   );
 };
 
