@@ -25,11 +25,11 @@ const AboutMe = () => {
               problem-solving and innovating solutions. Committed to excellence
               and efficiency, I prioritize delivering high-performance software
               products to effect meaningful change through technology.
-              Currently, I&apos;m interning at the{" "}
+              Currently, I&apos;m interning at the
               <span className='text-brightRed italic'>
                 ICT4D Research Center
-              </span>{" "}
-              , enhancing my <strong className='text-red-600'>django</strong>{" "}
+              </span>
+              , enhancing my <strong className='text-red-600'>django</strong>
               skill and expertise as well contributing to industry advancements.
             </p>
 
