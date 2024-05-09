@@ -7,24 +7,24 @@ import { faGithub, faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
 import TechStack from "./TechStack";
 
 const Hero = () => {
-  const leftRef = useRef(null);
-  const rightRef = useRef(null);
+  const topRef1 = useRef(null);
+  const topRef2 = useRef(null);
 
   useEffect(() => {
-    ScrollReveal().reveal(leftRef.current, {
-      origin: "left",
-      distance: "50px",
-      duration: 1600,
-      delay: 100,
+    ScrollReveal().reveal(topRef1.current, {
+      origin: "top",
+      distance: "250px",
+      duration: 2000,
+      delay: 300,
       easing: "ease",
-      reset: false,
+      reset: true,
     });
 
-    ScrollReveal().reveal(rightRef.current, {
-      origin: "right",
-      distance: "150px",
+    ScrollReveal().reveal(topRef2.current, {
+      origin: "top",
+      distance: "250px",
       duration: 2000,
-      delay: 500,
+      delay: 300,
       easing: "ease",
       reset: true,
     });
@@ -33,12 +33,12 @@ const Hero = () => {
     "Passionate Fullstack web developer dedicated to providing quality work in a timely manner.";
 
   return (
-    <div className='py-16 md:py-24'>
+    <div className='py-16 md:py-32'>
       <article
-        className='flex flex-col-reverse md:flex-row justify-between items-center w-4/5 mx-auto'
+        className='flex gap-16 flex-col-reverse md:flex-row justify-between items-center w-4/5 mx-auto'
         id='home'
       >
-        <section ref={leftRef} className='md:w-1/2 text-center md:text-left'>
+        <section ref={topRef1} className='md:w-1/2 text-center md:text-left'>
           <h1 className='text-3xl  md:hidden font-extrabold'>
             Hi, I am
             <span className='text-brightRed'>
@@ -84,7 +84,7 @@ const Hero = () => {
             </a>
           </div>
         </section>
-        <section ref={rightRef} className='md:w-1/2 mb-8 md:mb-0'>
+        <section ref={topRef2} className='md:w-1/2 mb-8 md:mb-0'>
           <MyImage />
         </section>
       </article>
