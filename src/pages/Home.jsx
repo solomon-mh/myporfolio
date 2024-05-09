@@ -4,12 +4,13 @@ import AboutMe from "../components/AboutMe";
 import MySkills from "../components/MySkills";
 import MyQualification from "../components/MyQualification";
 import Services from "../components/Services";
-import Projects from "../components/ProjectsSmallDevice";
-import ProjectsXl from "../components/ProjectsLargeDevice";
+// import Projects from "../components/ProjectsSmallDevice";
+// import ProjectsXl from "../components/ProjectsLargeDevice";
 import Footer from "../components/Footer";
 import ScrollToTop from "../components/ScrollToTop";
 import { useEffect, useRef } from "react";
 import ScrollReveal from "scrollreveal";
+import MyProjects from "../components/MyProjects";
 
 const Home = () => {
   const rightRef = useRef(null);
@@ -35,14 +36,15 @@ const Home = () => {
         <MySkills />
         <MyQualification />
         <Services />
-        <article id='projects' ref={rightRef}>
+        {/* <article id='projects' ref={rightRef}>
           <div className='md:hidden'>
             <Projects />
           </div>
           <div>
             <ProjectsXl />
           </div>
-        </article>
+        </article> */}
+        <MyProjects />
       </main>
       <Footer />
       <ScrollToTop />
