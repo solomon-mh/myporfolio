@@ -1,6 +1,5 @@
 import Header from "../components/Header";
 import Hero from "../components/Hero";
-import ScrollDown from "../utils/ScrollDown";
 import AboutMe from "../components/AboutMe";
 import MySkills from "../components/MySkills";
 import MyQualification from "../components/MyQualification";
@@ -31,7 +30,7 @@ const Home = () => {
       <Header />
       <main className='md:w-9/10 m-auto md:my-24 mb-24 md:mt-12'>
         <Hero />
-        <ScrollDown />
+        {/* <ScrollDown /> */}
         <AboutMe />
         <MySkills />
         <MyQualification />
