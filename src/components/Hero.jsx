@@ -35,7 +35,7 @@ const Hero = () => {
   return (
     <div className='py-16 md:py-32'>
       <article
-        className='flex gap-16 flex-col-reverse md:flex-row justify-between items-center w-4/5 mx-auto'
+        className='flex bg-limen-200 gap-16 flex-col-reverse md:flex-row justify-between items-center w-4/5 mr-12 mx-auto'
         id='home'
       >
         <section ref={topRef1} className='md:w-1/2 text-center md:text-left'>
