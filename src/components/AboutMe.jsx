@@ -32,9 +32,9 @@ const AboutMe = () => {
   return (
     <section id='about' className='mx-12 text-center py-8'>
       <Title title='About Me' subTitle='My introduction' />
-      <figure ref={rightRef}>
+      <div ref={rightRef} className='my-4'>
         <MyImage />
-      </figure>
+      </div>
       <article ref={leftRef} className='md:w-3/5 m-auto leading-7'>
         <p>
           Hi, I&apos;m Solomon, a dedicated and passionate software engineer,
