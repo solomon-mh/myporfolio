@@ -9,7 +9,7 @@ const Footer = () => {
     }
   };
   return (
-    <footer>
+    <>
       <ContactMe />
       <div className='px-12 mb-20'>
         <div className='mb-8'>
@@ -41,7 +41,7 @@ const Footer = () => {
         <MySocialLinks />
         <p className='text-center py-8'>Solomon Muhye</p>
       </div>
-    </footer>
+    </>
   );
 };
 

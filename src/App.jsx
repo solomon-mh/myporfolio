@@ -1,11 +1,10 @@
-/* eslint-disable no-unused-vars */
+/* eslint-disable react-refresh/only-export-components */
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Education from "./components/Education";
 import Work from "./components/Work";
 import { createContext, useState } from "react";
 import { darkModeStyle, lightModeStyle } from "./styles/themeStyles";
-// eslint-disable-next-line react-refresh/only-export-components
 export const darkModeProvider = createContext();
 function App() {
   const [darkMode, setDarkMode] = useState(true);

@@ -1,9 +1,9 @@
 .img__container {
-  border-radius: 30% 30% / 80% 80%;
-  /* border-top-left-radius: 80%;
+  /* border-radius: 30% 30% / 80% 80%; */
+  border-top-left-radius: 80%;
   border-top-right-radius: 80%;
   border-bottom-left-radius: 100%;
-  border-bottom-right-radius: 20%; */
+  border-bottom-right-radius: 20%;
 }
 .header {
   -webkit-backdrop-filter: blur(6px);
