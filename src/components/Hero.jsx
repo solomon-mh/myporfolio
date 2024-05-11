@@ -33,15 +33,15 @@ const Hero = () => {
     "Passionate Fullstack web developer dedicated to providing quality work in a timely manner.";
 
   return (
-    <div className='py-16 md:py-32'>
+    <div className='pt-16 md:pt-32'>
       <article
-        className='flex bg-limen-200 gap-16 flex-col-reverse md:flex-row justify-between items-center w-4/5 mr-12 mx-auto'
+        className='flex gap-4 sm:gap-16 flex-col-reverse md:flex-row justify-between items-center w-4/5 mr-12 mx-auto'
         id='home'
       >
-        <section ref={topRef1} className='md:w-1/2 text-center md:text-left'>
-          <h1 className='text-3xl  md:hidden font-extrabold'>
+        <section className='md:w-1/2 text-center md:text-left' ref={topRef1}>
+          <h1 className='text-3xl -mb-5 sm:mb-0 md:hidden font-extrabold'>
             Hi, I am
-            <span className='text-brightRed'>
+            <span className='text-brightRed mx-1'>
               Solomon <span className='block'>Muhye</span>
             </span>
           </h1>
@@ -53,10 +53,10 @@ const Hero = () => {
               Solomon <span className='block'>Muhye</span>
             </span>
           </h1>
-          <small className='font-mono inline-block text-orange-400 mb-4'>
+          <small className='font-mono inline-block text-lime-500 mb-4'>
             Fullstack Developer
           </small>
-          <div className='mb-8'>
+          <div className='mb-8 hidden sm:block'>
             <Typewriter text={textToShow} />
           </div>
           <div className='flex justify-center md:justify-start gap-4'>
@@ -84,11 +84,11 @@ const Hero = () => {
             </a>
           </div>
         </section>
-        <section ref={topRef2} className='md:w-1/2 mb-8 md:mb-0'>
+        <section className='md:w-1/2 md:mb-0' ref={topRef2}>
           <MyImage />
         </section>
       </article>
-      <div className='flex my-8 sm:my-1 justify-center items-center gap-6'>
+      <div className='flex flex-col  my-8  justify-center items-center sm:gap-6 sm:flex-row sm:my-1'>
         <p className='text-lg font-semibold'>My Tech Stack</p>
         <TechStack />
       </div>
