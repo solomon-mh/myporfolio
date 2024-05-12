@@ -33,7 +33,7 @@ const Hero = () => {
     "Passionate Fullstack web developer dedicated to providing quality work in a timely manner.";
 
   return (
-    <div className='pt-16 md:pt-32'>
+    <div className='pt-20 md:pt-32'>
       <article
         className='flex gap-4 sm:gap-16 flex-col-reverse md:flex-row justify-between items-center w-4/5 mr-12 mx-auto'
         id='home'
