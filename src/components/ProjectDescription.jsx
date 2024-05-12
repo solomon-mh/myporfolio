@@ -24,12 +24,12 @@ function ProjectDescription({ project }) {
           </div>
         ))}
       </div>
-      <div className='flex justify-center space-x-4'>
+      <div className='flex flex-col gap-3 sm:flex-row justify-center space-x-4'>
         <a
           target='_blank'
           href={project.githubLink}
           rel='noreferrer'
-          className='flex items-center text-blue-500 hover:text-blue-700'
+          className='items-center inline-block text-blue-500 hover:text-blue-700'
         >
           <FontAwesomeIcon icon={faGithub} className='mr-2' />
           View Code
@@ -38,7 +38,7 @@ function ProjectDescription({ project }) {
           target='_blank'
           href={project.demoLink}
           rel='noreferrer'
-          className='flex items-center text-blue-500 hover:text-blue-700'
+          className='inline-block items-center text-blue-500 hover:text-blue-700'
         >
           <FontAwesomeIcon className='mr-2' icon={faLink} />
           View Demo
