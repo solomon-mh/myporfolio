@@ -31,7 +31,7 @@ const Education = () => {
   const edu = education.slice(0, visibleCards).map((ed) => {
     return (
       <div
-        className='relative mx-12 m-6 text-justify px-12 py-5 border-2'
+        className='relative mx-12 break-words my-6 text-justify px-12 py-5 border-2'
         key={crypto.randomUUID()}
       >
         <b className='block'>{ed.course}</b>
@@ -49,7 +49,7 @@ const Education = () => {
     <div>
       <div
         ref={rightRef}
-        className='education__timeline md:w-3/5 md:mx-auto m-12'
+        className='education__timeline md:w-3/5 md:mx-auto m-8 sm:m-12'
       >
         {edu}
       </div>
