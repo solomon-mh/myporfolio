@@ -47,7 +47,20 @@ const Header = () => {
     };
 
     window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+
+    //  handle outside the mobile-nav click
+    const handleOutsideClick = (e) => {
+      const navArea = document.getElementById("nav");
+      if (navArea && !navArea.contains(e.target)) {
+        setMenuOpen(false);
+      }
+    };
+    document.addEventListener("click", handleOutsideClick);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("click", handleOutsideClick);
+    };
   }, []);
 
   function scrollToSection(sectionId) {
