@@ -7,6 +7,7 @@ import Services from "./Services";
 import Footer from "./Footer";
 import ScrollToTop from "./ScrollToTop";
 import MyProjects from "./MyProjects";
+import ScrollX from "./TeckStack";
 
 export {
   Header,
@@ -17,5 +18,6 @@ export {
   Services,
   Footer,
   ScrollToTop,
+  ScrollX,
   MyProjects,
 };
