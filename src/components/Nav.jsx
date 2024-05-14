@@ -75,7 +75,7 @@ const Header = () => {
         <h1>
           Solomon <span className='text-brightRed'>Muhye</span>
         </h1>
-        <nav className='hidden md:blmock md:flex'>
+        <nav className='hidden sm:flex'>
           <button
             onClick={() => scrollToSection("nav")}
             className={`${
