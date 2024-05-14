@@ -114,3 +114,16 @@
     opacity: 100%;
   }
 }
+/* scroll */
+@keyframes scroll-x-reverse {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-scroll-x-reverse {
+  animation: scroll-x-reverse 20s linear infinite;
+}
