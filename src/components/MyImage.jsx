@@ -1,9 +1,13 @@
-import myImg from "../assets/myPicture/man.jpg";
+import myImg from "../assets/myPicture/solomon.png";
 import "../styles/component-stlyes.css";
 const MyImage = () => {
   return (
-    <div className='img__container w-56 h-56 mx-auto overflow-hidden'>
-      <img className='w-full h-full' src={myImg} alt='my image' />
+    <div className='img__container w-64 h-64 mx-auto overflow-hidden'>
+      <img
+        className='my__image transition duration-300 hover:scale-105'
+        src={myImg}
+        alt='my image'
+      />
     </div>
   );
 };
