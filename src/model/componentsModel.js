@@ -1,8 +1,6 @@
 import Nav from "../components/nav/MainHeader";
 import Hero from "../components/Hero";
 import AboutMe from "../components/AboutMe";
-import MySkills from "../components/skills/MySkills";
-import MyQualification from "../components/skills/MyQualification";
 import Services from "../components/Services";
 import Footer from "../components/Footer";
 import ScrollToTop from "../utils/ScrollToTop";
@@ -13,8 +11,6 @@ export {
   Nav,
   Hero,
   AboutMe,
-  MySkills,
-  MyQualification,
   Services,
   Footer,
   ScrollToTop,

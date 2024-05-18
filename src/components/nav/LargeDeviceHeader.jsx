@@ -22,6 +22,7 @@ const LargeDeviceHeader = ({ currentSection, scrollToSection }) => {
           Home
         </button>
         <button
+          onClick={() => scrollToSection("about")}
           className={`${
             currentSection === "about" ? "text-brightRed" : ""
           } navlinks`}
