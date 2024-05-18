@@ -30,16 +30,16 @@ const SkillList = () => {
   }, []);
 
   const technologies = [
-    { icon: faReact, name: "React" },
-    { icon: faNode, name: "Node.js" },
     { icon: faHtml5, name: "HTML5" },
     { icon: faCss3Alt, name: "CSS3" },
     { icon: faJsSquare, name: "JavaScript" },
+    { icon: faReact, name: "React" },
+    { icon: faNode, name: "Node.js" },
     { icon: faGitAlt, name: "Git" },
   ];
 
   return (
-    <div className='skill-container overflow-x-hidden whitespace-nowrap'>
+    <div className='skill-container my-3 overflow-x-hidden whitespace-nowrap'>
       <div
         ref={skillListRef}
         className='skill-list inline-block animate-scroll-x-reverse'
@@ -47,7 +47,7 @@ const SkillList = () => {
         {technologies.map((tech, index) => (
           <div
             key={index}
-            className='skill-item inline-block px-2.5 py-2.5 mr-4 mt-2 rounded group cursor-pointer transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-110'
+            className='inline-block px-2.5 py-2.5 mr-4 mt-2 rounded group cursor-pointer transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-110'
           >
             <FontAwesomeIcon
               icon={tech.icon}
