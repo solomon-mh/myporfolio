@@ -3,6 +3,12 @@
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
+.navlinks {
+  @apply text-sm font-semibold mx-1 my-0 py-0 px-3 transition-all duration-500 rounded-3xl cursor-pointer;
+}
+.navlinks:hover {
+  @apply text-brightRed py-0.5 px-3;
+}
 * {
   margin: 0;
   box-sizing: border-box;
