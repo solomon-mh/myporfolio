@@ -5,10 +5,10 @@ import { handleDownload } from "../utils/cvDownloader";
 
 const AboutMe = () => {
   return (
-    <section id='about' className='mx-12 text-center py-8'>
+    <section id='about' className='mx-12 px-6 text-center py-5'>
       <Title title='About Me' subTitle='My introduction' />
-      <article className='md:w-3/5 m-auto leading-7'>
-        <p className='text-left'>
+      <article className='md:w-4/5 m-auto leading-7'>
+        <p className='text-justify'>
           Hi, I&apos;m Solomon, a dedicated and passionate software engineer,
           web and mobile app developer. I thrive on solving problems and
           creating innovative solutions. With a focus on quality and efficiency,
@@ -34,7 +34,7 @@ const AboutMe = () => {
         <div className='resume-btn'>
           <button
             onClick={handleDownload}
-            className='bg-indigo-600 my-6 p-2 text-sm rounded-lg text-white'
+            className='bg-indigo-600 mt-8 p-2 text-sm rounded-lg text-white hover:bg-indigo-700 hover:scale-105 transition duration-300'
           >
             Download CV
             <i className='text-xs px-1'>
