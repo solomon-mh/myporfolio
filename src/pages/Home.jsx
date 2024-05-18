@@ -3,14 +3,12 @@ import ScrollReveal from "scrollreveal";
 import {
   AboutMe,
   Footer,
-  Header,
+  Nav,
   Hero,
-  MySkills,
-  MyQualification,
   MyProjects,
   ScrollToTop,
   Services,
-} from "../components/componentsModel";
+} from "../model/componentsModel";
 const Home = () => {
   const rightRef = useRef(null);
 
@@ -27,12 +25,10 @@ const Home = () => {
   }, []);
   return (
     <div>
-      <Header />
+      <Nav />
       <main className='md:w-9/10 m-auto md:my-24 mb-24 md:mt-12'>
         <Hero />
         <AboutMe />
-        <MySkills />
-        <MyQualification />
         <Services />
         <MyProjects />
       </main>
