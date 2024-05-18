@@ -8,8 +8,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Title from "../utils/Title";
 import { useEffect, useRef, useState } from "react";
 import { myServices } from "../data/myService";
-import Modal from "./Modal";
-
+import Modal from "../utils/Modal";
 const Services = () => {
   const rightRef = useRef(null);
 
@@ -75,7 +74,7 @@ const Services = () => {
                 >
                   <FontAwesomeIcon icon={faTimes} />
                 </div>
-                <Modal id={id} />
+                <Modal services={services} id={id} />
               </div>
             </div>
           )}

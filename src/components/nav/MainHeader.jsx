@@ -35,6 +35,7 @@ const Header = () => {
 
     const handleOutsideClick = (e) => {
       const navArea = document.getElementById("nav");
+
       if (navArea && !navArea.contains(e.target)) {
         setMenuOpen(false);
       }
