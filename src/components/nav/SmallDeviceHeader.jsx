@@ -37,7 +37,7 @@ const SmallDeviceHeader = ({
           {darkMode ? (
             <SunIcon className='w-6 h-6' />
           ) : (
-            <MoonIcon className='w-6 h-6 rotate-180' />
+            <MoonIcon className='w-6 h-6' />
           )}
         </button>
         <div
