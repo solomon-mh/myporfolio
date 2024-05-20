@@ -18,13 +18,13 @@ const Header = () => {
       const projectsSection = document.getElementById("projects").offsetTop;
       const contactSection = document.getElementById("contact").offsetTop;
 
-      if (scrollPosition < aboutSection) {
+      if (scrollPosition < aboutSection - 10) {
         setCurrentSection("home");
-      } else if (scrollPosition < servicesSection) {
+      } else if (scrollPosition < servicesSection - 10) {
         setCurrentSection("about");
-      } else if (scrollPosition < projectsSection) {
+      } else if (scrollPosition < projectsSection - 10) {
         setCurrentSection("services");
-      } else if (scrollPosition < contactSection) {
+      } else if (scrollPosition < contactSection - 10) {
         setCurrentSection("projects");
       } else {
         setCurrentSection("contact");
@@ -46,7 +46,7 @@ const Header = () => {
       window.removeEventListener("scroll", handleScroll);
       window.removeEventListener("click", handleOutsideClick);
     };
-  }, []);
+  }, [currentSection]);
 
   const scrollToSection = (sectionId) => {
     const section = document.getElementById(sectionId);
