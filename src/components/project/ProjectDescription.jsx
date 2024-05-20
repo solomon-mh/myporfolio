@@ -2,27 +2,9 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLink } from "@fortawesome/free-solid-svg-icons";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
-import { useEffect, useRef } from "react";
-import ScrollReveal from "scrollreveal";
-
 function ProjectDescription({ project }) {
-  const rightRef = useRef(null);
-  useEffect(() => {
-    ScrollReveal().reveal(rightRef.current, {
-      origin: "right",
-      distance: "300px",
-      rotate: { y: 90 },
-      duration: 2000,
-      delay: 300,
-      easing: "ease",
-      reset: true,
-    });
-  }, []);
   return (
-    <div
-      ref={rightRef}
-      className='w-5/6 sm:w-full mx-auto px-6 py-8 text-center leading-relaxed rounded-lg shadow-md'
-    >
+    <div className='w-5/6 sm:w-full mx-auto px-6 py-8 text-center leading-relaxed rounded-lg shadow-md'>
       <p className='text-2xl font-medium mb-2'>{project.projectTitle}</p>
       <p className='text-gray-600 text-xl mb-4'>{project.projectType}</p>
       <p className='text-gray-600 mb-6 text-center'>{project.desc}</p>
@@ -30,14 +12,16 @@ function ProjectDescription({ project }) {
         {project.technologies.map((tech, index) => (
           <div
             key={index}
-            className=' group cursor-pointer transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-110'
+            className='group cursor-pointer transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-110'
           >
             <FontAwesomeIcon
               icon={tech.icon}
               size='2xl'
               className='text-xl text-gray-400 group-hover:text-brightRed transition duration-300 ease-in-out'
             />
-            {/* <span className='block'>{tech.name}</span> */}
+            <span className='group-hover:text-brightRed block text-xs my-0.5'>
+              {tech.name}
+            </span>
           </div>
         ))}
       </div>
