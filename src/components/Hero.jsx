@@ -7,39 +7,30 @@ import { faGithub, faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
 import { TechStack } from "../model/componentsModel";
 
 const Hero = () => {
-  const topRef1 = useRef(null);
-  const topRef2 = useRef(null);
+  const topRef = useRef(null);
 
   useEffect(() => {
-    ScrollReveal().reveal(topRef1.current, {
+    ScrollReveal().reveal(topRef.current, {
       origin: "top",
       distance: "250px",
-      duration: 2000,
-      delay: 300,
-      easing: "ease",
-      reset: true,
-    });
-
-    ScrollReveal().reveal(topRef2.current, {
-      origin: "top",
-      distance: "250px",
-      duration: 2000,
-      delay: 300,
+      duration: 2300,
+      delay: 350,
       easing: "ease",
       reset: true,
     });
   }, []);
   const textToShow =
-    "Passionate Fullstack web developer dedicated to providing quality work in a timely manner.";
+    "Passionate web developer based in Ethiopia, dedicated to providing quality work in a timely manner.";
 
   return (
     <div className='pt-20 md:pt-32'>
       <article
+        ref={topRef}
         className='flex gap-4 sm:gap-16 flex-col-reverse md:flex-row justify-between items-center w-4/5 mr-12 mx-auto'
         id='home'
       >
-        <section className='md:w-1/2 text-center md:text-left' ref={topRef1}>
-          <h1 className='text-3xl -mb-5 sm:mb-0 md:hidden font-extrabold'>
+        <section className='md:w-1/2 text-center md:text-left'>
+          <h1 className='text-3xl -mb-10 sm:mb-0 md:hidden font-extrabold'>
             Hi, I am
             <span className='text-brightRed mx-1'>
               Solomon <span className='block'>Muhye</span>
@@ -53,9 +44,9 @@ const Hero = () => {
               Solomon <span className='block'>Muhye</span>
             </span>
           </h1>
-          <small className='font-mono inline-block text-lime-500 mb-4'>
-            Fullstack Developer
-          </small>
+          <p className='font-mono font-extrabold text-lg inline-block text-lime-500 my-4'>
+            FullStack Developer
+          </p>
           <div className='mb-8 hidden sm:block'>
             <Typewriter text={textToShow} />
           </div>
@@ -84,7 +75,7 @@ const Hero = () => {
             </a>
           </div>
         </section>
-        <section className='md:w-1/2 md:mb-0' ref={topRef2}>
+        <section className='md:w-1/2 md:mb-0'>
           <MyImage />
         </section>
       </article>
