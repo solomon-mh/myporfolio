@@ -11,7 +11,8 @@ const Footer = () => {
   return (
     <>
       <ContactMe />
-      <div className='px-12 mb-20'>
+      <hr className='my-8' />
+      <div className='w-3/4  mx-auto my-16'>
         <div className='mb-8'>
           <h1 className='text-3xl text-green-600'>Solomon Muhye</h1>
           <small className='font-mono text-orange-400'>
@@ -39,7 +40,7 @@ const Footer = () => {
           </div>
         </div>
         <MySocialLinks />
-        <p className='text-center py-8'>Solomon Muhye</p>
+        <p className='text-center py-8'>Solomon Muhye &copy; 2024</p>
       </div>
     </>
   );
