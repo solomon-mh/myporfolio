@@ -11,7 +11,8 @@ const Modal = ({ id }) => {
   }
 
   return (
-    <div className='py-4 mt-6 z-50'>
+    <div className='py-4 mt-3 z-50'>
+      <b className='text-lg'>{indvService.serviceName}</b>
       <ul className='my-4 text-left w-fit m-auto'>
         {indvService.services.map((service, index) => (
           <li

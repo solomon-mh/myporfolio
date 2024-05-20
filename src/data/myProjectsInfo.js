@@ -4,10 +4,10 @@ import regalSample from "../assets/sample/regalSample.jpg";
 import {
   faReact,
   faNode,
-  faCss3Alt,
-  faJsSquare,
-  faGitAlt,
+  faSass,
+  faPython,
 } from "@fortawesome/free-brands-svg-icons";
+import { faLeaf } from "@fortawesome/free-solid-svg-icons";
 export const myProjects = [
   {
     id: 1,
@@ -18,9 +18,9 @@ export const myProjects = [
     demoLink: "https://jibyteaiwebsitecloe.netlify.app/",
     githubLink: "https://github.com/SolomonMuhyeY/jibyteWebsiteClone.git",
     technologies: [
+      { icon: faSass, name: "Sass" },
       { icon: faReact, name: "React" },
       { icon: faNode, name: "Node.js" },
-      { icon: faJsSquare, name: "JavaScript" },
     ],
   },
   {
@@ -34,8 +34,6 @@ export const myProjects = [
     technologies: [
       { icon: faReact, name: "React" },
       { icon: faNode, name: "Node.js" },
-      { icon: faJsSquare, name: "JavaScript" },
-      { icon: faGitAlt, name: "Git" },
     ],
   },
   {
@@ -48,8 +46,8 @@ export const myProjects = [
     githubLink: "https://github.com/SolomonMuhyeY/vanlife.git",
     technologies: [
       { icon: faReact, name: "React" },
-      { icon: faCss3Alt, name: "CSS3" },
-      { icon: faJsSquare, name: "JavaScript" },
+      { icon: faLeaf, name: "Tailwind" },
+      { icon: faPython, name: "Django" },
     ],
   },
 ];
