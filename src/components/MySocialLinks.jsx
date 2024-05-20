@@ -11,7 +11,7 @@ const MySocialLinks = () => {
       <aside className='mx-12 flex gap-6 text-indigo-300'>
         <a
           className='hover:scale-110 hover:text-indigo-600 duration-500'
-          href='#linkedin'
+          href='https://www.linkedin.com/in/solomonmuhye'
         >
           <FontAwesomeIcon icon={faLinkedinIn} />
         </a>

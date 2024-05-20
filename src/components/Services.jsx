@@ -69,7 +69,7 @@ const Services = () => {
             <div className='modal__overlay'>
               <div className='modal w-3/5 sm:w-fit sm:px-12'>
                 <div
-                  className='absolute top-3 right-3 w-6 h-6 rounded-full border-2 flex items-center justify-center cursor-pointer duration-500 hover:text-red-800 hover:border-red-300'
+                  className='absolute top-3 right-3 w-6 h-6 rounded-full border-2 flex items-center justify-center cursor-pointer duration-500 hover:border-red-500'
                   onClick={(e) => toggleModal(e)}
                 >
                   <FontAwesomeIcon icon={faTimes} />

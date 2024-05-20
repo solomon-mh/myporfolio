@@ -8,7 +8,7 @@ const AboutMe = () => {
     <section id='about' className='mx-12 px-6 text-center py-5'>
       <Title title='About Me' subTitle='My introduction' />
       <article className='md:w-4/5 m-auto leading-7'>
-        <p className='text-justify'>
+        <p className='text-left'>
           Hi, I&apos;m Solomon, a dedicated and passionate software engineer,
           web and mobile app developer. I thrive on solving problems and
           creating innovative solutions. With a focus on quality and efficiency,

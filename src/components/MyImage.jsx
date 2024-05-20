@@ -1,5 +1,5 @@
+import "../styles/componentStlyes.css";
 import myImg from "../assets/myPicture/solomon.png";
-import "../styles/component-stlyes.css";
 const MyImage = () => {
   return (
     <div className='img__container w-64 h-64 mx-auto overflow-hidden'>
