@@ -3,6 +3,7 @@
 import { MoonIcon, SunIcon } from "@heroicons/react/24/outline";
 import { useContext } from "react";
 import { darkModeProvider } from "../../App";
+import { NavLink } from "react-router-dom";
 
 const LargeDeviceHeader = ({ currentSection, scrollToSection }) => {
   const { toggleDarkMode, darkMode } = useContext(darkModeProvider);
@@ -13,46 +14,46 @@ const LargeDeviceHeader = ({ currentSection, scrollToSection }) => {
         Solomon <span className='text-brightRed'>Muhye</span>
       </h1>
       <nav className='flex'>
-        <button
+        <NavLink
           onClick={() => scrollToSection("nav")}
           className={`${
             currentSection === "home" ? "text-brightRed" : ""
           } navlinks`}
         >
           Home
-        </button>
-        <button
+        </NavLink>
+        <NavLink
           onClick={() => scrollToSection("about")}
           className={`${
             currentSection === "about" ? "text-brightRed" : ""
           } navlinks`}
         >
           About
-        </button>
-        <button
+        </NavLink>
+        <NavLink
           onClick={() => scrollToSection("services")}
           className={`${
             currentSection === "services" ? "text-brightRed" : ""
           } navlinks`}
         >
           Services
-        </button>
-        <button
+        </NavLink>
+        <NavLink
           onClick={() => scrollToSection("projects")}
           className={`${
             currentSection === "projects" ? "text-brightRed" : ""
           } navlinks`}
         >
           Projects
-        </button>
-        <button
+        </NavLink>
+        <NavLink
           onClick={() => scrollToSection("contact")}
           className={`${
             currentSection === "contact" ? "text-brightRed" : ""
           } navlinks`}
         >
-          Contact
-        </button>
+          Contact Me
+        </NavLink>
         <button onClick={() => toggleDarkMode()}>
           {darkMode ? (
             <SunIcon className='w-6 h-6' />
