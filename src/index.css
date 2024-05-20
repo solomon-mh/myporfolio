@@ -4,10 +4,13 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 .navlinks {
-  @apply text-sm font-semibold mx-1 my-0 py-0 px-3 transition-all duration-500 rounded-3xl cursor-pointer;
+  @apply text-sm font-semibold mx-1 my-0 py-0 px-3 transition-all duration-200 rounded-3xl cursor-pointer;
 }
 .navlinks:hover {
-  @apply text-brightRed py-0.5 px-3;
+  @apply text-brightRed px-3 border-b-2;
+}
+.navlinks:active {
+  @apply py-0.5;
 }
 * {
   margin: 0;
