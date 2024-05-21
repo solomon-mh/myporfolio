@@ -13,12 +13,12 @@ const ContactMe = () => {
         <p className='text-sm'>
           Contact me and get a 50% discount on your new Project
         </p>
-        <div className='flex gap-4 my-8'>
+        <div className='flex flex-col sm:flex-row gap-4 my-8'>
           <a
             href='https://www.linkedin.com/in/solomonmuhye'
             target='_blank'
             rel='noopener noreferrer'
-            className='bg-blue-600 hover:bg-blue-700 px-4 py-3 text-sm rounded-lg text-white flex items-center'
+            className='w-fit bg-blue-600 hover:bg-blue-700 px-4 py-3 text-sm rounded-lg text-white flex items-center'
           >
             <i className='pr-2'>
               <FontAwesomeIcon icon={faLinkedinIn} />
@@ -29,12 +29,12 @@ const ContactMe = () => {
             href='mailto:solomonmuhye12@gmail.com'
             target='_blank'
             rel='noopener noreferrer'
-            className='bg-gray-800 hover:bg-gray-900 px-4 py-3 text-sm rounded-lg text-white flex items-center'
+            className='w-fit bg-gray-900 hover:bg-gray-800 px-4 py-3 text-sm rounded-lg text-white flex items-center transition-colors duration-300'
           >
             <i className='pr-2'>
-              <FontAwesomeIcon icon={faEnvelope} />
+              <FontAwesomeIcon icon={faEnvelope} className='text-gray-400' />
             </i>
-            SolomonMuhye
+            <span className='font-medium'>SolomonMuhye</span>
           </a>
         </div>
       </div>
