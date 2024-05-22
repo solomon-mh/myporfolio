@@ -2,13 +2,13 @@ import { useEffect, useRef } from "react";
 import ScrollReveal from "scrollreveal";
 import {
   AboutMe,
-  Footer,
-  Nav,
+  NavBar,
   Hero,
+  Footer,
   MyProjects,
   ScrollToTop,
   Services,
-} from "../model/componentsModel";
+} from "../components";
 const Home = () => {
   const rightRef = useRef(null);
 
@@ -25,7 +25,7 @@ const Home = () => {
   }, []);
   return (
     <div>
-      <Nav />
+      <NavBar />
       <main className='md:w-9/10 m-auto md:my-24 mb-24 md:mt-12'>
         <Hero />
         <AboutMe />
