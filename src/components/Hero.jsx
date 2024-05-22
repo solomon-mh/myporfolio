@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import MyImage from "./MyImage";
 import Typewriter from "../utils/TypeWriter";
 import { faGithub, faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
-import { TechStack } from "../model/componentsModel";
+import { TeckStack } from "../components";
 
 const Hero = () => {
   const topRef = useRef(null);
@@ -81,7 +81,7 @@ const Hero = () => {
       </article>
       <div className='md:w-4/5 flex flex-col my-10 mr-12 mx-auto items-center sm:gap-6 sm:flex-row sm:my-1'>
         <p className='text-lg font-semibold'>My Tech Stack</p>
-        <TechStack />
+        <TeckStack />
       </div>
     </div>
   );
