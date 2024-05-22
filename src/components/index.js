@@ -1,0 +1,11 @@
+export { default as AboutMe } from "./AboutMe";
+export { default as NavBar } from "./nav/MainHeader";
+export { default as ContactMe } from "./ContactMe";
+export { default as Footer } from "./Footer";
+export { default as Hero } from "./Hero";
+export { default as MyProjects } from "./project/MyProjects";
+export { default as MyImage } from "./MyImage";
+export { default as Services } from "./Services";
+export { default as ScrollToTop } from "../utils/ScrollToTop";
+export { default as TeckStack } from "./TeckStack";
+export { default as Work } from "./Work";
