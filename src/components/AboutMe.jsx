@@ -13,7 +13,7 @@ const AboutMe = () => {
       id='about'
       className={`${
         darkMode ? "text-gray-200" : "text-gray-800"
-      } w-4/5 mx-auto py-12`}
+      } w-4/5 mx-auto py-12 `}
     >
       <div className='container mx-auto px-4 max-w-6xl'>
         <Title title='About Me' subTitle='My introduction' />
@@ -25,11 +25,11 @@ const AboutMe = () => {
               problem-solving and innovating solutions. Committed to excellence
               and efficiency, I prioritize delivering high-performance software
               products to effect meaningful change through technology.
-              Currently, I&apos;m interning at the
+              Currently, I&apos;m interning at the{" "}
               <span className='text-brightRed italic'>
                 ICT4D Research Center
-              </span>
-              , enhancing my <strong className='text-red-600'>django</strong>
+              </span>{" "}
+              , enhancing my <strong className='text-red-600'>django</strong>{" "}
               skill and expertise as well contributing to industry advancements.
             </p>
 
@@ -64,7 +64,7 @@ const AboutMe = () => {
               </button>
             </div>
           </article>
-          <div className='hidden lg:block md:w-2/5 mt-8 md:mt-0 md:mr-8'>
+          <div className='hidden lg:block md:w-1/2 mt-8 md:mt-0 md:mr-8'>
             <div className='relative'>
               <img
                 src={coder}
