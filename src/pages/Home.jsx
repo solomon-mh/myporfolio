@@ -26,7 +26,7 @@ const Home = () => {
   return (
     <div>
       <NavBar />
-      <main className='md:w-9/10 m-auto md:my-24 mb-24 md:mt-12'>
+      <main className='m-auto md:my-24 mb-24 md:mt-12'>
         <Hero />
         <AboutMe />
         <Services />
