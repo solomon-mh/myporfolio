@@ -5,7 +5,7 @@ import {
   NavBar,
   Hero,
   Footer,
-  MyProjects,
+  // MyProjects,
   ScrollToTop,
   Services,
 } from "../components";
@@ -30,7 +30,7 @@ const Home = () => {
         <Hero />
         <AboutMe />
         <Services />
-        <MyProjects />
+        {/* <MyProjects /> */}
       </main>
       <footer>
         <Footer />

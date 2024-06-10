@@ -9,7 +9,6 @@ import {
   faGitAlt,
   faPython,
 } from "@fortawesome/free-brands-svg-icons";
-import { SiDjango } from "react-icons/si";
 
 const SkillList = () => {
   const skillListRef = useRef(null);
@@ -38,7 +37,7 @@ const SkillList = () => {
     { icon: faPython, name: "Python", type: "fontawesome" },
     { icon: faReact, name: "React", type: "fontawesome" },
     { icon: faNode, name: "Node.js", type: "fontawesome" },
-    { icon: SiDjango, name: "Django", type: "react-icons" },
+    { icon: null, name: "DJ", type: "text" },
     { icon: faGitAlt, name: "Git", type: "fontawesome" },
   ];
 
@@ -59,7 +58,9 @@ const SkillList = () => {
                 className='text-xl text-gray-400 group-hover:text-brightRed transition duration-300 ease-in-out'
               />
             ) : (
-              <SiDjango className='text-xl text-gray-400 group-hover:text-brightRed transition duration-300 ease-in-out' />
+              <p className='text-xl text-gray-400 font-semibold group-hover:text-brightRed transition duration-300 ease-in-out'>
+                dj
+              </p>
             )}
           </div>
         ))}

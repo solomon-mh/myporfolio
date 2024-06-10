@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 function CardImage({ projImg }) {
   return (
-    <div className='w-5/6 sm:w-full mx-auto rounded-xl overflow-hidden'>
+    <div className='w-5/6 h-[25rem] sm:w-full mx-auto rounded-xl overflow-hidden'>
       <img
         src={projImg}
         alt='My Projects image'

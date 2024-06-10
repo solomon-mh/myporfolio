@@ -15,16 +15,18 @@ const Header = () => {
       const scrollPosition = window.scrollY;
       const aboutSection = document.getElementById("about").offsetTop;
       const servicesSection = document.getElementById("services").offsetTop;
-      const projectsSection = document.getElementById("projects").offsetTop;
+      // const projectsSection = document.getElementById("projects").offsetTop;
       const contactSection = document.getElementById("contact").offsetTop;
 
       if (scrollPosition < aboutSection - 10) {
         setCurrentSection("home");
       } else if (scrollPosition < servicesSection - 10) {
         setCurrentSection("about");
-      } else if (scrollPosition < projectsSection - 10) {
-        setCurrentSection("services");
-      } else if (scrollPosition < contactSection - 10) {
+      }
+      // else if (scrollPosition < projectsSection - 10) {
+      //   setCurrentSection("services");
+      // }
+      else if (scrollPosition < contactSection - 10) {
         setCurrentSection("projects");
       } else {
         setCurrentSection("contact");

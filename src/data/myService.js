@@ -6,17 +6,20 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import { faLeaf } from "@fortawesome/free-solid-svg-icons";
 import sample1 from "../assets/sample/coder.jpg";
-import sample2 from "../assets/sample/coder.jpg";
-import sample3 from "../assets/sample/code.png";
-import sample4 from "../assets/sample/coder2.jpg";
-import sample5 from "../assets/sample/coder.jpg";
+import sample2 from "../assets/sample/coder2.jpg";
+import sample4 from "../assets/sample/regalSample.jpg";
+import sample5 from "../assets/sample/code.png";
+import jibyte1 from "../assets/project_samples/jibyete1.jpg";
+import jibyte2 from "../assets/project_samples/jibyte2.jpg";
+import jibyte3 from "../assets/project_samples/jibyte3.jpg";
+import jibyte4 from "../assets/project_samples/jibyte4.jpg";
 
 export const myServices = [
   {
     id: 1,
     sampleProjects: [
       {
-        projImg: sample1,
+        projImg: [jibyte1, jibyte2, jibyte3, jibyte4],
         desc: "an AI website clone that exactly clone the ui of the jibyteai website with RWD.A project that represents a platform or template designed for creating striking and impressive portfolios or websites, akin to a canvas upon which one can showcase their skills, talents, and achievements in a regal manner.",
         demoLink: "https://jibyteaiwebsitecloe.netlify.app/",
         githubLink: "https://github.com/SolomonMuhyeY/jibyteWebsiteClone.git",
@@ -27,7 +30,7 @@ export const myServices = [
         ],
       },
       {
-        projImg: sample2,
+        projImg: [sample1, jibyte2, sample2, jibyte4],
         desc: "an AI website clone that exactly clone the ui of the jibyteai website with RWD.A project that represents a platform or template designed for creating striking and impressive portfolios or websites, akin to a canvas upon which one can showcase their skills, talents, and achievements in a regal manner.",
         demoLink: "https://jibyteaiwebsitecloe.netlify.app/",
         githubLink: "https://github.com/SolomonMuhyeY/jibyteWebsiteClone.git",
@@ -49,23 +52,21 @@ export const myServices = [
     id: 2,
     sampleProjects: [
       {
-        projImg: sample3,
-        desc: "an AI website clone that exactly clone the ui of the jibyteai website with RWD.A project that represents a platform or template designed for creating striking and impressive portfolios or websites, akin to a canvas upon which one can showcase their skills, talents, and achievements in a regal manner.",
-        demoLink: "https://jibyteaiwebsitecloe.netlify.app/",
-        githubLink: "https://github.com/SolomonMuhyeY/jibyteWebsiteClone.git",
+        projImg: [sample4, sample5, jibyte3, sample1],
+        desc: "A project that represents a platform or template designed for creating striking and impressive portfolios or websites, akin to a canvas upon which one can showcase their skills, talents, and achievements in a regal manner.",
+        demoLink: "https://lustrous-biscuit-fd717c.netlify.app",
+        githubLink: "https://github.com/SolomonMuhyeY/RegalCanvas.git",
         technologies: [
-          { icon: faSass, name: "Sass" },
           { icon: faReact, name: "React" },
           { icon: faNode, name: "Node.js" },
         ],
       },
       {
-        projImg: sample4,
-        desc: "an AI website clone that exactly clone the ui of the jibyteai website with RWD.A project that represents a platform or template designed for creating striking and impressive portfolios or websites, akin to a canvas upon which one can showcase their skills, talents, and achievements in a regal manner.",
-        demoLink: "https://jibyteaiwebsitecloe.netlify.app/",
-        githubLink: "https://github.com/SolomonMuhyeY/jibyteWebsiteClone.git",
+        projImg: [sample1, jibyte2, sample1, jibyte4],
+        desc: "A project that represents a platform or template designed for creating striking and impressive portfolios or websites, akin to a canvas upon which one can showcase their skills, talents, and achievements in a regal manner.",
+        demoLink: "https://lustrous-biscuit-fd717c.netlify.app",
+        githubLink: "https://github.com/SolomonMuhyeY/RegalCanvas.git",
         technologies: [
-          { icon: faSass, name: "Sass" },
           { icon: faReact, name: "React" },
           { icon: faNode, name: "Node.js" },
         ],
@@ -83,18 +84,18 @@ export const myServices = [
     id: 3,
     sampleProjects: [
       {
-        projImg: sample5,
-        desc: "an AI website clone that exactly clone the ui of the jibyteai website with RWD.A project that represents a platform or template designed for creating striking and impressive portfolios or websites, akin to a canvas upon which one can showcase their skills, talents, and achievements in a regal manner.",
-        demoLink: "https://jibyteaiwebsitecloe.netlify.app/",
-        githubLink: "https://github.com/SolomonMuhyeY/jibyteWebsiteClone.git",
+        projImg: [jibyte1, sample1, jibyte3, sample4],
+        desc: "Dynamic business sites that reflect your brand and engage customer. It is a website for car Rent for vacation and other stuff. The site implements Routing and other things.",
+        demoLink: "https://example.com",
+        githubLink: "https://github.com/SolomonMuhyeY/vanlife.git",
         technologies: [
-          { icon: faSass, name: "Sass" },
           { icon: faReact, name: "React" },
-          { icon: faNode, name: "Node.js" },
+          { icon: faLeaf, name: "Tailwind" },
+          { icon: faPython, name: "Django" },
         ],
       },
       {
-        projImg: sample1,
+        projImg: [sample1, jibyte2, sample1, jibyte4],
         desc: "an AI website clone that exactly clone the ui of the jibyteai website with RWD.A project that represents a platform or template designed for creating striking and impressive portfolios or websites, akin to a canvas upon which one can showcase their skills, talents, and achievements in a regal manner.",
         demoLink: "https://jibyteaiwebsitecloe.netlify.app/",
         githubLink: "https://github.com/SolomonMuhyeY/jibyteWebsiteClone.git",

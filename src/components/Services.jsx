@@ -36,7 +36,7 @@ const Services = () => {
   const services = myServices.map((service) => (
     <div
       key={service.id}
-      className='bg-gray-800 px-6 py-4 shadow-lg rounded-lg cursor-pointer duration-500 hover:scale-105 hover:shadow-xl transform transition-all'
+      className='bg-gray-800 px-6 py-4 rounded-lg cursor-pointer duration-500 hover:scale-105 hover:shadow-xl transform transition-all'
       onClick={() => toggleModal(service.id)} // Move onClick handler here
     >
       <div>
@@ -44,12 +44,6 @@ const Services = () => {
           <FontAwesomeIcon icon={faCode} />
         </div>
         <h2 className='text-xl font-semibold'>{service.serviceName}</h2>
-        {/* <div className='mt-4'>
-          <span className='text-purple-500 hover:text-purple-700 underline flex items-center'>
-            View More
-            <FontAwesomeIcon icon={faArrowRight} className='ml-2' />
-          </span>
-        </div> */}
       </div>
     </div>
   ));
@@ -65,7 +59,7 @@ const Services = () => {
           <div className='col-span-8'>
             <div className='modal w-full rounded-lg shadow-lg relative'>
               <div
-                className='absolute top-4 right-4 w-8 h-8 flex items-center justify-center bg-gray-200 rounded-full cursor-pointer hover:bg-gray-300'
+                className='absolute z-50 right-0 -top-2 w-8 h-8 flex items-center justify-center bg-gray-200 rounded-full cursor-pointer hover:bg-gray-300'
                 onClick={() => setIsModalOpen(false)}
               >
                 <FontAwesomeIcon icon={faTimes} />

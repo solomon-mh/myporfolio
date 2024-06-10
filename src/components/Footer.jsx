@@ -12,7 +12,7 @@ const Footer = () => {
     <>
       <ContactMe />
       <hr className='my-8' />
-      <div className='w-3/4  mx-auto my-16'>
+      <div className='w-3/4  mx-auto my-16 mb-4'>
         <div className='mb-8'>
           <h1 className='text-3xl text-green-600'>Solomon Muhye</h1>
           <small className='font-mono text-orange-400'>

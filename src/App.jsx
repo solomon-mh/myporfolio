@@ -1,10 +1,9 @@
 /* eslint-disable react-refresh/only-export-components */
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
-import Education from "./components/Education";
-import Work from "./components/Work";
+
 import { createContext, useState } from "react";
 import { darkModeStyle, lightModeStyle } from "./styles/themeStyles";
+import { BrowserRouter as Router } from "react-router-dom";
 export const darkModeProvider = createContext();
 function App() {
   const [darkMode, setDarkMode] = useState(true);
@@ -16,18 +15,13 @@ function App() {
     toggleDarkMode,
   };
   return (
-    <darkModeProvider.Provider value={contextValue}>
-      <Router>
+    <Router>
+      <darkModeProvider.Provider value={contextValue}>
         <div style={darkMode ? darkModeStyle : lightModeStyle}>
-          <Routes>
-            <Route path='/' element={<Home />}>
-              <Route index element={<Education />} />
-              <Route path='/work' element={<Work />} />
-            </Route>
-          </Routes>
+          <Home />
         </div>
-      </Router>
-    </darkModeProvider.Provider>
+      </darkModeProvider.Provider>
+    </Router>
   );
 }
 

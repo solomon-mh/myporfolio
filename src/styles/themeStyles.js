@@ -5,7 +5,7 @@ export const darkModeStyle = {
   overflow: "hidden",
 };
 export const lightModeStyle = {
-  backgroundColor: "#fff",
+  backgroundColor: "#eee",
   color: "#000",
   width: "100%",
   overflow: "hidden",

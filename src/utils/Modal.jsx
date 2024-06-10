@@ -25,11 +25,6 @@ const Modal = ({ id }) => {
                 onMouseEnter={() => setHoveredIndex(index)}
                 onMouseLeave={() => setHoveredIndex(null)}
               >
-                {/* <img
-                  src={project.projImg}
-                  alt='sample'
-                  className='w-full h-full object-cover rounded-lg'
-                /> */}
                 <ImageSlider images={project.projImg} />
                 {hoveredIndex === index && (
                   <div className='absolute inset-0 bg-black bg-opacity-80 flex items-center justify-center'>
@@ -71,10 +66,10 @@ const Modal = ({ id }) => {
             .reverse()}
         </div>
         <hr className='my-4 h-2' />
-        <div className='mt-6'>
-          <div className='text-center mb-6'>
+        <div className='mx-5 mt-6'>
+          <div className='text-left mb-6 text-blue-500 underline'>
             <h2 className='text-2xl font-bold mt-4'>
-              {indvService.serviceName}
+              My Service as, {indvService.serviceName}
             </h2>
             <p className='text-gray-600 mt-2'>{indvService.description}</p>
           </div>
