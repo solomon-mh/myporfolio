@@ -13,20 +13,24 @@ const AboutMe = () => {
       id='about'
       className={`${
         darkMode ? "text-gray-200" : "text-gray-800"
-      } w-4/5 mx-auto py-12 `}
+      } w-4/5 mx-auto py-12`}
     >
       <div className='container mx-auto px-4 max-w-6xl'>
         <Title title='About Me' subTitle='My introduction' />
         <section className='lg:flex gap-8 items-center mt-4'>
           <article className='lg:w-1/2 text-center md:text-left'>
             <p className='text-lg mb-6 font-sans'>
-              Hi, I&apos;m Solomon, a dedicated and passionate software
-              engineer, web and mobile app developer. I thrive on solving
-              problems and creating innovative solutions. With a focus on
-              quality and efficiency, I am committed to delivering
-              high-performance software products. My goal is to make a
-              meaningful impact through technology and to continuously expand my
-              skills to stay at the forefront of the industry.
+              Greetings, I&apos;m Solomon, a dedicated software engineer
+              specializing in web and mobile app development. My focus is on
+              problem-solving and innovating solutions. Committed to excellence
+              and efficiency, I prioritize delivering high-performance software
+              products to effect meaningful change through technology.
+              Currently, I&apos;m interning at the{" "}
+              <span className='text-brightRed italic'>
+                ICT4D Research Center
+              </span>{" "}
+              , enhancing my <strong className='text-red-600'>django</strong>{" "}
+              skill and expertise as well contributing to industry advancements.
             </p>
 
             <div className='mb-6 gap-2 sm:gap-8 w-4/5 flex px-6 mt-6 leading-4 justify-left'>
@@ -60,7 +64,7 @@ const AboutMe = () => {
               </button>
             </div>
           </article>
-          <div className='hidden lg:block md:w-1/2 mt-8 md:mt-0 md:mr-8'>
+          <div className='hidden lg:block md:w-2/5 mt-8 md:mt-0 md:mr-8'>
             <div className='relative'>
               <img
                 src={coder}
