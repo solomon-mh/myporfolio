@@ -20,10 +20,10 @@ const Hero = () => {
     });
   }, []);
   const textToShow =
-    "Passionate web developer based in Ethiopia, dedicated to providing quality work in a timely manner.";
+    "Passionate Fullstack developer based in Ethiopia, dedicated to providing quality work in a timely manner.";
 
   return (
-    <div className='pt-20 md:pt-32'>
+    <div className='pt-20'>
       <article
         ref={topRef}
         className='flex gap-4 sm:gap-16 flex-col-reverse md:flex-row justify-between items-center w-4/5 mr-12 mx-auto'
@@ -55,23 +55,25 @@ const Hero = () => {
               href='https://www.linkedin.com/in/solomonmuhye'
               target='_blank'
               rel='noopener noreferrer'
-              className='bg-blue-600 hover:bg-blue-700 px-4 py-3 text-sm rounded-lg text-white flex items-center'
             >
-              <i className='pr-2'>
-                <FontAwesomeIcon icon={faLinkedinIn} />
-              </i>
-              LinkedIn
+              <button className='inline-flex h-12 animate-shimmer items-center justify-center rounded-md  bg-[linear-gradient(110deg,#3b6bdc,45%,#7e99d8,65%,#3b6bdc)] bg-[length:200%_100%] px-6 font-medium text-slate-100 transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50'>
+                <i className='pr-2'>
+                  <FontAwesomeIcon icon={faLinkedinIn} />
+                </i>
+                LinkedIn
+              </button>
             </a>
             <a
               href='https://github.com/SolomonMuhyeY'
               target='_blank'
               rel='noopener noreferrer'
-              className='bg-gray-800 hover:bg-gray-900 px-4 py-3 text-sm rounded-lg text-white flex items-center'
             >
-              <i className='pr-2'>
-                <FontAwesomeIcon icon={faGithub} />
-              </i>
-              GitHub
+              <button className='inline-flex h-12 animate-shimmer items-center justify-center rounded-md border border-slate-800 bg-[linear-gradient(110deg,#000103,45%,#a0b7d8,55%,#000103)] bg-[length:200%_100%] px-6 font-medium text-slate-100 transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50'>
+                <i className='pr-2'>
+                  <FontAwesomeIcon icon={faGithub} />
+                </i>
+                GitHub
+              </button>
             </a>
           </div>
         </section>
