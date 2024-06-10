@@ -24,7 +24,7 @@ const SmallDeviceHeader = ({
   return (
     <div
       className={`header fixed md:hidden z-40 justify-between py-4 top-0 flex w-full ${
-        darkMode ? "bg-headerColor" : "bg-slate-100"
+        darkMode ? "bg-headerColor" : "bg-slate-200"
       }`}
     >
       <div className='px-4'>
@@ -54,7 +54,7 @@ const SmallDeviceHeader = ({
       {menuOpen && (
         <div
           className={`flex fixed top-full right-0 gap-8 flex-col px-10 py-4 pb-8 h-screen w-fit ${
-            darkMode ? "bg-headerColor z-30" : "bg-slate-100"
+            darkMode ? "bg-headerColor z-30" : "bg-slate-200"
           }`}
         >
           <div
