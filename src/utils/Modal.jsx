@@ -3,6 +3,7 @@ import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { myServices } from "../data/myService";
 import { faCheck } from "@fortawesome/free-solid-svg-icons";
+import ImageSlider from "../components/ImageSlider";
 
 const Modal = ({ id }) => {
   const indvService = myServices.find((service) => service.id === Number(id));
@@ -14,7 +15,6 @@ const Modal = ({ id }) => {
 
   return (
     <div>
-      <hr className='my-4 h-2' />
       <div>
         <div className='hidden md:grid flex-col-reverse lg:grid-cols-2 gap-4'>
           {indvService.sampleProjects
@@ -25,11 +25,12 @@ const Modal = ({ id }) => {
                 onMouseEnter={() => setHoveredIndex(index)}
                 onMouseLeave={() => setHoveredIndex(null)}
               >
-                <img
+                {/* <img
                   src={project.projImg}
                   alt='sample'
                   className='w-full h-full object-cover rounded-lg'
-                />
+                /> */}
+                <ImageSlider images={project.projImg} />
                 {hoveredIndex === index && (
                   <div className='absolute inset-0 bg-black bg-opacity-80 flex items-center justify-center'>
                     <div className='proj_desc text-white text-center p-4'>
@@ -69,6 +70,7 @@ const Modal = ({ id }) => {
             ))
             .reverse()}
         </div>
+        <hr className='my-4 h-2' />
         <div className='mt-6'>
           <div className='text-center mb-6'>
             <h2 className='text-2xl font-bold mt-4'>
