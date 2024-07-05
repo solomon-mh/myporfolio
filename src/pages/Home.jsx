@@ -8,6 +8,7 @@ import {
   // MyProjects,
   ScrollToTop,
   Services,
+  MyProjects,
 } from "../components";
 const Home = () => {
   const rightRef = useRef(null);
@@ -26,11 +27,15 @@ const Home = () => {
   return (
     <div>
       <NavBar />
-      <main className='m-auto md:my-24 mb-24 md:mt-12'>
+      <main className="m-auto md:my-24 mb-24 md:mt-12">
         <Hero />
         <AboutMe />
-        <Services />
-        {/* <MyProjects /> */}
+        <div className="hidden md:block">
+          <Services />
+        </div>
+        <div className="block md:hidden">
+          <MyProjects />
+        </div>
       </main>
       <footer>
         <Footer />
