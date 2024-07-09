@@ -16,7 +16,7 @@ const ImageSlider = ({ images, interval = 3000 }) => {
   }, [images.length, interval]);
 
   return (
-    <div className='image-slider relative w-full h-48 md:h-56 lg:h-64 overflow-hidden'>
+    <div className="image-slider rounded-lg relative w-full h-full  overflow-hidden">
       {images.map((image, index) => (
         <div
           key={index}
@@ -29,7 +29,7 @@ const ImageSlider = ({ images, interval = 3000 }) => {
           <img
             src={image}
             alt={`Slide ${index}`}
-            className='w-full h-full object-cover'
+            className="w-full h-full object-cover"
           />
         </div>
       ))}
