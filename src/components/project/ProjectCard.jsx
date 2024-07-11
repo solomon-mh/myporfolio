@@ -19,7 +19,7 @@ function Card({ project, index }) {
   return (
     <div
       ref={topRef}
-      className='grid grid-cols-1 w-4/5 rounded-2xl mx-auto md:grid-cols-2 gap-8'
+      className="grid grid-cols-1 w-4/5 rounded-2xl mx-auto gap-8"
     >
       {index % 2 == 0 ? (
         <>
