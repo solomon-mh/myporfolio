@@ -11,54 +11,61 @@ const Header = () => {
   };
 
   useEffect(() => {
-    const handleScroll = () => {
-      const scrollPosition = window.scrollY;
-      const aboutSection = document.getElementById("about").offsetTop;
-      const servicesSection = document.getElementById("services").offsetTop;
-      // const projectsSection = document.getElementById("projects").offsetTop;
-      const contactSection = document.getElementById("contact").offsetTop;
+    const sections = ["home", "about", "services", "projects", "contact"];
 
-      if (scrollPosition < aboutSection - 10) {
-        setCurrentSection("home");
-      } else if (scrollPosition < servicesSection - 10) {
-        setCurrentSection("about");
-      }
-      // else if (scrollPosition < projectsSection - 10) {
-      //   setCurrentSection("services");
-      // }
-      else if (scrollPosition < contactSection - 10) {
-        setCurrentSection("projects");
-      } else {
-        setCurrentSection("contact");
-      }
+    const sectionElements = sections.map((id) => {
+      const element = document.getElementById(id);
+      return element;
+    });
+
+    const observerOptions = {
+      root: null,
+      rootMargin: "0px",
+      threshold: 0.1,
     };
 
-    window.addEventListener("scroll", handleScroll);
-
-    const handleOutsideClick = (e) => {
-      const navArea = document.getElementById("nav");
-
-      if (navArea && !navArea.contains(e.target)) {
-        setMenuOpen(false);
-      }
+    const observerCallback = (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setCurrentSection(entry.target.id);
+        }
+      });
     };
-    document.addEventListener("click", handleOutsideClick);
+
+    const observer = new IntersectionObserver(
+      observerCallback,
+      observerOptions
+    );
+
+    sectionElements.forEach((element) => {
+      if (element) observer.observe(element);
+    });
 
     return () => {
-      window.removeEventListener("scroll", handleScroll);
-      window.removeEventListener("click", handleOutsideClick);
+      sectionElements.forEach((element) => {
+        if (element) observer.unobserve(element);
+      });
     };
-  }, [currentSection]);
+  }, []);
 
   const scrollToSection = (sectionId) => {
     const section = document.getElementById(sectionId);
+    const headerHeight = document.getElementById("nav").offsetHeight;
+
     if (section) {
-      section.scrollIntoView({ behavior: "smooth" });
+      const sectionPosition =
+        section.getBoundingClientRect().top + window.scrollY - 80;
+      const offsetPosition = sectionPosition - headerHeight;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth",
+      });
     }
   };
 
   return (
-    <section id='nav'>
+    <section id="nav">
       <LargeDeviceHeader
         currentSection={currentSection}
         scrollToSection={scrollToSection}
