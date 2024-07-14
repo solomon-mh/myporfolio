@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import {
-  faBagShopping,
+  // faBagShopping,
   faChalkboardUser,
   faContactBook,
   faHome,
@@ -27,21 +27,21 @@ const SmallDeviceHeader = ({
         darkMode ? "bg-headerColor" : "bg-slate-200"
       }`}
     >
-      <div className='px-4'>
+      <div className="px-4">
         <h1>
-          Solomon <span className='text-brightRed'>Muhye</span>
+          Solomon <span className="text-purple">Muhye</span>
         </h1>
       </div>
-      <div className='px-4 flex gap-3'>
+      <div className="px-4 flex gap-3">
         <button onClick={() => toggleDarkMode()}>
           {darkMode ? (
-            <SunIcon className='w-6 h-6' />
+            <SunIcon className="w-6 h-6" />
           ) : (
-            <MoonIcon className='w-6 h-6' />
+            <MoonIcon className="w-6 h-6" />
           )}
         </button>
         <div
-          className='z-50 py-1 px-2 text-brightRed cursor-pointer hover:outline-double'
+          className="z-50 py-1 px-2 text-brightRed cursor-pointer hover:outline-double"
           onClick={() => toggleMenu()}
         >
           {menuOpen ? (
@@ -64,7 +64,7 @@ const SmallDeviceHeader = ({
             } navlinks`}
           >
             <FontAwesomeIcon icon={faHome} />
-            <span className='inline-block px-2'> Home</span>
+            <span className="inline-block px-2"> Home</span>
           </div>
           <div
             onClick={() => scrollToSection("about")}
@@ -73,17 +73,17 @@ const SmallDeviceHeader = ({
             } navlinks`}
           >
             <FontAwesomeIcon icon={faChalkboardUser} />
-            <span className='inline-block px-2'> About</span>
+            <span className="inline-block px-2"> About</span>
           </div>
-          <div
+          {/* <div
             onClick={() => scrollToSection("services")}
             className={`${
               currentSection === "services" ? "text-brightRed" : ""
             } navlinks`}
           >
             <FontAwesomeIcon icon={faBagShopping} />
-            <span className='inline-block px-2'> Services</span>
-          </div>
+            <span className="inline-block px-2"> Services</span>
+          </div> */}
           <div
             onClick={() => scrollToSection("projects")}
             className={`${
@@ -91,7 +91,7 @@ const SmallDeviceHeader = ({
             } navlinks`}
           >
             <FontAwesomeIcon icon={faImage} />
-            <span className='inline-block px-2'>Projects</span>
+            <span className="inline-block px-2">Projects</span>
           </div>
           <div
             onClick={() => scrollToSection("contact")}
@@ -100,7 +100,7 @@ const SmallDeviceHeader = ({
             } navlinks`}
           >
             <FontAwesomeIcon icon={faContactBook} />
-            <span className='inline-block px-2'>Contact</span>
+            <span className="inline-block px-2">Contact</span>
           </div>
         </div>
       )}
