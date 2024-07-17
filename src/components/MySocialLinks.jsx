@@ -25,7 +25,7 @@ const MySocialLinks = () => {
           target='_blank'
           rel='noreferrer'
           className='hover:scale-110 hover:text-indigo-600 duration-500'
-          href='https://github.com/SolomonMuhyeY'
+          href='https://github.com/solomon-mh'
         >
           <FontAwesomeIcon icon={faGithub} />
         </a>
