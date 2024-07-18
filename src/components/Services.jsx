@@ -1,14 +1,9 @@
 import ScrollReveal from "scrollreveal";
-import {
-  faArrowRight,
-  faCode,
-  faTimes,
-} from "@fortawesome/free-solid-svg-icons";
+import { faCode } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import Title from "../utils/Title";
 import { useEffect, useRef, useState } from "react";
 import { myServices } from "../data/myService";
-import Modal from "../utils/Modal";
+import ProjectAndServiceCard from "./project/ProjectAndServiceCard";
 
 const Services = () => {
   const rightRef = useRef(null);
@@ -26,45 +21,52 @@ const Services = () => {
   }, []);
 
   const [isModalOpen, setIsModalOpen] = useState(true);
-  const [id, setId] = useState(myServices[0].id); // Set initial description to first service
+  const [selectedId, setSelectedId] = useState(myServices[0].id); // Set initial selected ID to the first service
 
-  const toggleModal = (id) => {
+  const handleMouseEnter = (id) => {
+    setSelectedId(id);
     setIsModalOpen(true);
-    setId(id);
   };
 
   const services = myServices.map((service) => (
     <div
       key={service.id}
-      className='bg-gray-800 px-6 py-4 rounded-lg cursor-pointer duration-500 hover:scale-105 hover:shadow-xl transform transition-all'
-      onClick={() => toggleModal(service.id)} // Move onClick handler here
+      className={`relative px-6 py-4 rounded-lg cursor-pointer duration-300 transform transition-all
+    ${
+      selectedId === service.id
+        ? "bg-blue-600 text-white shadow-lg scale-110"
+        : "bg-gray-700 text-gray-200 hover:bg-gray-600 hover:shadow-md hover:scale-105"
+    }`}
+      onClick={() => setSelectedId(service.id)}
+      onMouseEnter={() => handleMouseEnter(service.id)}
     >
-      <div>
-        <div className='mb-4 text-4xl text-purple-500'>
+      <div className="flex flex-col items-center">
+        <div className="mb-4 text-3xl text-blue-400">
           <FontAwesomeIcon icon={faCode} />
         </div>
-        <h2 className='text-xl font-semibold'>{service.serviceName}</h2>
+        <h2 className="text-lg font-semibold text-center">
+          {service.serviceName}
+        </h2>
       </div>
     </div>
   ));
 
   return (
-    <section id='services' className='container mx-auto my-16 text-center'>
-      <Title title='My Services' subTitle='Here is what I can do' />
-      <div ref={rightRef} className='grid grid-cols-1 md:grid-cols-12 gap-6'>
-        <aside className='col-span-4 space-y-8 py-6 px-6 rounded-lg shadow-lg'>
+    <section
+      id="services"
+      className="container w-9/10 mx-auto my-16 text-center"
+    >
+      <div
+        ref={rightRef}
+        className="grid grid-cols-1 items-center md:grid-cols-12 gap-6"
+      >
+        <aside className="col-span-4 space-y-8 py-6 px-6 rounded-lg shadow-lg">
           {services}
         </aside>
         {isModalOpen && (
-          <div className='col-span-8'>
-            <div className='modal w-full rounded-lg shadow-lg relative'>
-              <div
-                className='absolute z-50 right-0 -top-2 w-8 h-8 flex items-center justify-center bg-gray-200 rounded-full cursor-pointer hover:bg-gray-300'
-                onClick={() => setIsModalOpen(false)}
-              >
-                <FontAwesomeIcon icon={faTimes} />
-              </div>
-              <Modal id={id} />
+          <div className="col-span-8">
+            <div className="modal w-full rounded-lg shadow-lg relative">
+              <ProjectAndServiceCard id={selectedId} />
             </div>
           </div>
         )}
