@@ -10,6 +10,7 @@ import {
   Services,
   MyProjects,
 } from "../components";
+import Section from "../components/Section";
 const Home = () => {
   const rightRef = useRef(null);
 
@@ -27,7 +28,7 @@ const Home = () => {
   return (
     <div>
       <NavBar />
-      <main className="m-auto md:my-24 mb-24 md:mt-12">
+      <main className="m-auto md:mt-12">
         <Hero />
         <AboutMe />
         <div className="hidden md:block">
@@ -40,6 +41,11 @@ const Home = () => {
       <footer>
         <Footer />
       </footer>
+      <Section
+        crosses
+        crossesOffset="lg:translate-y-[5.25rem]"
+        customPaddings
+      />
       <aside>
         <ScrollToTop />
       </aside>

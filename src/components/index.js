@@ -7,5 +7,5 @@ export { default as MyProjects } from "./project/MyProjects";
 export { default as MyImage } from "./MyImage";
 export { default as Services } from "./Services";
 export { default as ScrollToTop } from "../utils/ScrollToTop";
-export { default as TeckStack } from "./TeckStack";
+export { default as TechStack } from "./TechStack";
 export { default as Work } from "./Work";

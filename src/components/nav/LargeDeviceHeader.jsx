@@ -1,8 +1,7 @@
 /* eslint-disable react/prop-types */
 
+import { useState, useEffect } from "react";
 import { MoonIcon, SunIcon } from "@heroicons/react/24/outline";
-import { useContext } from "react";
-import { darkModeProvider } from "../../App";
 import { NavLink } from "react-router-dom";
 import {
   faChalkboardUser,
@@ -11,16 +10,42 @@ import {
   faLaptopCode, // Import the new icon
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import lightLogoR from "../../assets/logo/lightLogoR.png";
+import darkLogoR1 from "../../assets/logo/darkLogoR1.png";
 
 const LargeDeviceHeader = ({ currentSection, scrollToSection }) => {
-  const { toggleDarkMode, darkMode } = useContext(darkModeProvider);
+  const [isDarkMode, setIsDarkMode] = useState(false);
+
+  useEffect(() => {
+    const storedTheme = localStorage.getItem("theme");
+    if (storedTheme === "dark") {
+      document.documentElement.classList.add("dark");
+      setIsDarkMode(true);
+    }
+  }, []);
+
+  const toggleTheme = () => {
+    setIsDarkMode(!isDarkMode);
+    if (isDarkMode) {
+      document.documentElement.classList.remove("dark");
+      localStorage.setItem("theme", "light");
+    } else {
+      document.documentElement.classList.add("dark");
+      localStorage.setItem("theme", "dark");
+    }
+  };
 
   return (
-    <header className="header hidden md:flex min-w-full left-0 fixed justify-between items-center z-50 bg-headerColor text-white text-xl py-4 px-8 top-0">
-      <h1>
-        Solomon <span className="text-purple-600">Muhye</span>
-      </h1>
-      <nav className="flex space-x-6">
+    <header className="hidden md:flex min-w-full left-0 fixed justify-between items-center z-50 bg-slate-200 dark:bg-headerColor text-white text-xl py-4 px-8 top-0">
+      <div className={`relative w-64 h-20 overflow-hidden rounded-2xl`}>
+        <img
+          className="absolute inset-0 w-full h-full object-cover"
+          src={isDarkMode ? darkLogoR1 : lightLogoR}
+          alt="Logo"
+        />
+      </div>
+
+      <nav className="dark:text-white text-slate-800 flex ml-auto xl:mr-20 space-x-6">
         <NavLink
           onClick={() => scrollToSection("home")}
           className={`navlinks ${
@@ -61,11 +86,15 @@ const LargeDeviceHeader = ({ currentSection, scrollToSection }) => {
           <br />
           Contact Me
         </NavLink>
-        <button onClick={() => toggleDarkMode()} className="ml-4">
-          {darkMode ? (
-            <SunIcon className="w-6 h-6" />
+        <button
+          id="theme-toggle"
+          onClick={toggleTheme}
+          className="ml-4 p-2 rounded-full bg-gray-200 dark:bg-gray-700"
+        >
+          {isDarkMode ? (
+            <SunIcon className="w-6 h-6 text-yellow-500" />
           ) : (
-            <MoonIcon className="w-6 h-6" />
+            <MoonIcon className="w-6 h-6 text-gray-800" />
           )}
         </button>
       </nav>

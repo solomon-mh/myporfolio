@@ -3,34 +3,36 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Title from "../utils/Title";
 import { handleDownload } from "../utils/cvDownloader";
 import coder from "../assets/sample/coder2.jpg";
-import { useContext } from "react";
-import { darkModeProvider } from "../App";
+import Section from "./Section";
+import { ShootingStarsAndStarsBackground } from "./ShootingStarsAndStarsBackground";
 
 const AboutMe = () => {
-  const { darkMode } = useContext(darkModeProvider);
   return (
-    <section
+    <Section
+      className="px-16 text-center py-8 md:py-28"
+      crosses
+      crossesOffset="lg:translate-y-[5.25rem]"
+      customPaddings
       id="about"
-      className={`${
-        darkMode ? "text-gray-200" : "text-gray-800"
-      } w-9/10 mx-auto py-12 `}
     >
-      <div className="container mx-auto px-4 max-w-6xl">
+      <ShootingStarsAndStarsBackground />
+      <div className="px-4 max-w-6xl">
         <Title title="About Me" subTitle="My introduction" />
-        <section className="lg:flex gap-8 items-center mt-4">
+        <section className="lg:flex gap-8 items-center mt-4 z-50">
           <article className="lg:w-1/2 text-center md:text-left">
-            <p className="text-lg mb-6 font-sans">
+            <p className="font-serif text-lg mx-8 break-words mb-6">
               I&apos;m a skilled software developer with experience in
-              TypeScript and JavaScript, and expertise in frameworks like React,
-              Node.js, and Next.js. I&apos;m a quick learner and collaborate
-              closely with clients to create efficient, scalable, and
-              user-friendly solutions that solve real-world problems. Let&apos;s
-              work together to bring your ideas to life!
+              TypeScript and JavaScript and PHP, and expertise in frameworks
+              like React, Node.js, Next.js, Nest.Js and Laravel. I&apos;m a
+              quick learner and collaborate closely with clients to create
+              efficient, scalable, and user-friendly solutions that solve
+              real-world problems. Let&apos;s work together to bring your ideas
+              to life!
             </p>
 
-            <div className="mb-6 gap-2 sm:gap-8 w-4/5 flex px-6 mt-6 leading-4 justify-left">
+            <div className="mb-6 mx-auto gap-2 sm:gap-8 w-4/5 flex px-6 mt-6 leading-4 justify-left">
               <div className="text-center">
-                <b className="text-sm text-brightRed">01+</b>
+                <b className="text-sm text-brightRed">03+</b>
                 <small className="block text-gray-400">Years Experience</small>
               </div>
               <div className="text-center">
@@ -40,11 +42,11 @@ const AboutMe = () => {
                 </small>
               </div>
               <div className="text-center">
-                <b className="text-sm text-brightRed">01+</b>
+                <b className="text-sm text-brightRed">02+</b>
                 <small className="block text-gray-400">Companies Worked</small>
               </div>
             </div>
-            <div className="resume-btn text-center md:text-left">
+            <div className="resume-btn text-center md:text-left mx-8">
               <button
                 onClick={handleDownload}
                 className="relative inline-flex h-12 overflow-hidden rounded-lg p-[1px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50"
@@ -59,6 +61,7 @@ const AboutMe = () => {
               </button>
             </div>
           </article>
+
           <div className="hidden lg:block md:w-1/2 mt-8 md:mt-0 md:mr-8">
             <div className="relative">
               <img
@@ -71,7 +74,7 @@ const AboutMe = () => {
           </div>
         </section>
       </div>
-    </section>
+    </Section>
   );
 };
 

@@ -16,15 +16,16 @@ const ProjectAndServiceCard = ({ id }) => {
   }
 
   return (
-    <div className="p-6a shadow-md rounded-lg">
-      <div className="mx-5 mt relative -top-12">
+    <div className="p-6 shadow-md rounded-lg">
+      <div className="mx-5">
         {!showProjects ? (
           <>
             <Title title="My Services" subTitle="here is what I can do." />
             <div>
-              <div className="text-left mb-6 text-blue-500 underline">
+              <div className="text-left mb-6">
                 <h2 className="text-2xl font-bold mt-4">
-                  My Service as, {indvService.serviceName}
+                  My Service as,{" "}
+                  <span className="italic">a {indvService.serviceName}</span>
                 </h2>
                 <p className="text-gray-600 mt-2">{indvService.description}</p>
               </div>
@@ -73,7 +74,7 @@ const ProjectAndServiceCard = ({ id }) => {
                             </i>
                           ))}
                         </div>
-                        <div className="flex justify-center gap-4">
+                        <div className="flex flex-col justify-center gap-4">
                           <a
                             href={project.demoLink}
                             className="py-2 px-4 bg-blue-500 text-white rounded hover:bg-blue-600 transition duration-300 ease-in-out"

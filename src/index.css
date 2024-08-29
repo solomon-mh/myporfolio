@@ -1,5 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Jersey+10&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jersey+10&display=swap');
 
 @import "tailwindcss/base";
 @import "tailwindcss/components";
@@ -16,18 +16,13 @@
   color-scheme: dark;
 }
 .hero-header {
-  font-family: "Jersey 10", sans-serif;
   font-weight: 400;
   font-style: normal;
 }
 :root {
-  --body-color: hsla(228, 15%, 15%);
+  --body-color: hsla(100%, 100%, 100%, 1);
   --body-font: "Poppins", sans-serif;
 }
 body::-webkit-scrollbar {
   display: none;
-}
-body {
-  background-color: var(--body-color);
-  color: white;
 }

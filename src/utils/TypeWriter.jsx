@@ -31,7 +31,7 @@ const Typewriter = ({ text, repeatTimes = 0 }) => {
 
   return (
     <div>
-      <p>{displayText}</p>
+      <p className="font-serif">{displayText}</p>
     </div>
   );
 };

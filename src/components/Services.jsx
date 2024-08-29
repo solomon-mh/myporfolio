@@ -4,6 +4,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useEffect, useRef, useState } from "react";
 import { myServices } from "../data/myService";
 import ProjectAndServiceCard from "./project/ProjectAndServiceCard";
+import Section from "./Section";
+import { ShootingStarsAndStarsBackground } from "./ShootingStarsAndStarsBackground";
 
 const Services = () => {
   const rightRef = useRef(null);
@@ -28,13 +30,13 @@ const Services = () => {
     setIsModalOpen(true);
   };
 
-  const services = myServices.map((service) => (
+  const servicesName = myServices.map((service) => (
     <div
       key={service.id}
       className={`relative px-6 py-4 rounded-lg cursor-pointer duration-300 transform transition-all
     ${
       selectedId === service.id
-        ? "bg-blue-600 text-white shadow-lg scale-110"
+        ? "bg-gray-500 text-white shadow-lg scale-110"
         : "bg-gray-700 text-gray-200 hover:bg-gray-600 hover:shadow-md hover:scale-105"
     }`}
       onClick={() => setSelectedId(service.id)}
@@ -52,26 +54,30 @@ const Services = () => {
   ));
 
   return (
-    <section
+    <Section
+      crosses
+      crossesOffset="lg:translate-y-[5.25rem]"
+      customPaddings
       id="services"
-      className="container w-9/10 mx-auto my-16 text-center"
+      className="pl-16 py-32 mx-auto text-center"
     >
+      <ShootingStarsAndStarsBackground />
       <div
         ref={rightRef}
-        className="grid grid-cols-1 items-center md:grid-cols-12 gap-6"
+        className="flex justify-center items-center w-9/10 mx-auto gap-6"
       >
-        <aside className="col-span-4 space-y-8 py-6 px-6 rounded-lg shadow-lg">
-          {services}
+        <aside className="w-1/2 space-y-8 py-6 px-6 rounded-lg shadow-lg">
+          {servicesName}
         </aside>
         {isModalOpen && (
-          <div className="col-span-8">
-            <div className="modal w-full rounded-lg shadow-lg relative">
+          <div className="w-full max-w-scremen-lg">
+            <div className="rounded-lg shadow-lg relative">
               <ProjectAndServiceCard id={selectedId} />
             </div>
           </div>
         )}
       </div>
-    </section>
+    </Section>
   );
 };
 
